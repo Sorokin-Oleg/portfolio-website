@@ -1,0 +1,37 @@
+.navbar-button {
+    background: inherit;
+    color: $light-color;    
+    font-size: 2rem;
+    padding: 1rem 0;
+    border: none;
+    outline: inherit;
+    cursor: pointer;
+    &:hover {
+        & i {
+            display: none;
+        }
+        .navbar-button-name {          
+            color: $hover-color;
+            display: inline-block;            
+        }
+    }    
+}
+
+.navbar-button-name {
+    display: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;   
+}
+
+@include media-breakpoint-lg {
+    .navbar-button {
+        width: 6rem;
+    }
+}
+
+@include media-breakpoint-md {
+    .navbar-button {
+        font-size: 1.8rem;
+        width: 5rem;
+    }
+}

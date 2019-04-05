@@ -9,7 +9,7 @@ class App extends React.Component {
                 <Navbar />               
                 <div className="content"><h1>First page</h1></div>
             </div>
-        );
+        )
     }
 };
 
