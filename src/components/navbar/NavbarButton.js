@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 class NavbarButton extends React.Component {
-
     constructor(props){
         super(props);
     }

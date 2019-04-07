@@ -3,16 +3,34 @@ import NavbarButton from './NavbarButton';
 import ToggleBar from './ToggleBar';
 
 class Navbar extends React.Component {
-
     constructor(props) {
         super(props);
-    }
 
-    render() {
+        this.state = {
+            toggleActive: false
+        }
+
+        this.toggleBarActive = this.toggleBarActive.bind(this);
+    }    
+    /**
+     * The method performed by the ToggleBar component.
+     * Sets the state of the mobile menu (state: toggleActive).
+     */
+    toggleBarActive() {
+        this.setState({toggleActive: !this.state.toggleActive});
+    }
+    
+    render() {        
+        let navOpen = 'navbar-close';
+
+        if (this.state.toggleActive) {
+            navOpen = 'navbar-open';
+        } 
+
         return (
             <section className='navbar-container'>
                 <div id='navbar_logo'></div>
-                <nav id='navbar_content'>
+                <nav id='navbar_content' className={navOpen}>
                     <NavbarButton name='home' iconName='fas fa-home' />
                     <NavbarButton name='about' iconName='fas fa-user' />
                     <NavbarButton name='skills' iconName='fas fa-cog' />
@@ -26,10 +44,10 @@ class Navbar extends React.Component {
                         <li><a href="#"><i className="fab fa-vk"></i></a></li>
                     </ul>                    
                 </div>
-                <ToggleBar />
+                <ToggleBar active={this.state.toggleActive} onClick={() => this.toggleBarActive()}/>
             </section>
         )
-    }
+    }    
 };
 
 export default Navbar; 
