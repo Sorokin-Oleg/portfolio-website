@@ -10,7 +10,7 @@
         & i {
             display: none;                       
         }
-        .navbar-button-name {                     
+        .navbar-button-name {             
             color: $hover-color;
             display: inline-block;                         
         }         
@@ -18,10 +18,11 @@
 }
 
 .navbar-button-name {      
-    display: none;
+    display: none; 
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
 }
+
 
 @include media-breakpoint-lg {
     .navbar-button {

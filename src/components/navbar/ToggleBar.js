@@ -2,11 +2,7 @@ import React, {Component} from 'react';
 
 class ToggleBar extends React.Component {
     render() {        
-        let toggleBar = 'toggle-bar';
-
-        if (this.props.active) {
-            toggleBar = 'toggle-bar toggle-bar-opened';
-        }   
+        let toggleBar = this.props.active ? 'toggle-bar toggle-bar-opened' : 'toggle-bar';
 
         return (            
             <button className={toggleBar} onClick={this.props.onClick} >

@@ -2,7 +2,7 @@
 @import "utils/fonts";
 @import "utils/variables";
 @import "utils/mixins";
-@import "utils/sections";
+@import "components/section/sections";
 
 html {
     line-height: $mainLineHeight;
@@ -33,6 +33,6 @@ ul, li {
     padding: 0;
 }  
 
-@import 'components/navbar';
-@import 'components/navbarButton';
-@import 'components/toggleBar';
+@import 'components/navbar/navbar';
+@import 'components/navbar/navbarButton';
+@import 'components/navbar/toggleBar';

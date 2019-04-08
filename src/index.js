@@ -4,8 +4,7 @@ import App from './App'
 
 import './scss/main.scss'
 
-// ========================================
-  
+
 ReactDOM.render(
     <App />,
     document.getElementById('react-root')
