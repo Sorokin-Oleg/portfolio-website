@@ -6,10 +6,7 @@ class Navbar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            toggleActive: false
-        }
-
+        this.state = {toggleActive: false}
         this.toggleBarActive = this.toggleBarActive.bind(this);
     }    
     /**
@@ -27,11 +24,11 @@ class Navbar extends React.Component {
             <section className='navbar-container'>
                 <div id='navbar_logo'></div>
                 <nav id='navbar_content' className={navOpen}>
-                    <NavbarButton name='home' iconName='fas fa-home'/>
-                    <NavbarButton name='about' iconName='fas fa-user'/>
-                    <NavbarButton name='skills' iconName='fas fa-cog'/>
-                    <NavbarButton name='work' iconName='fas fa-eye'/>
-                    <NavbarButton name='contact' iconName='fas fa-paper-plane'/>
+                    <NavbarButton links='/' name='home' iconName='fas fa-home'/>
+                    <NavbarButton links='/about/' name='about' iconName='fas fa-user'/>
+                    <NavbarButton links='/skills/' name='skills' iconName='fas fa-cog'/>
+                    <NavbarButton links='/work/' name='work' iconName='fas fa-eye'/>
+                    <NavbarButton links='/contact/' name='contact' iconName='fas fa-paper-plane'/>
                 </nav>
                 <div id='navbar_links'>
                     <ul className='navbar-links'>

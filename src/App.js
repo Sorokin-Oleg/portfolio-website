@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom" 
 import Navbar from './components/navbar/Navbar';
 import SectionHome from './components/section/SectionHome';
 import SectionAbout from './components/section/SectionAbout';
@@ -10,35 +11,20 @@ import SectionContact from './components/section/SectionContact';
 class App extends React.Component {
     constructor(props){
         super(props);
-        this.renderSwitch = this.renderSwitch.bind(this);
-    }
-
-    /**
-     * The method of displaying the current page (page repository)
-     */
-    renderSwitch(pageIndex){
-        switch (pageIndex) {
-            case 1:
-                return <SectionHome />;
-            case 2:
-                return <SectionAbout />;
-            case 3:
-                return <SectionSkills />;
-            case 4:
-                return <SectionWork />;
-            case 5:
-                return <SectionContact />;        
-            default:
-                return <SectionHome />;
-        }
     }
 
     render() {
         return (
-            <div className='main-content'>
-                <Navbar />               
-                {this.renderSwitch()}
-            </div>
+            <Router>
+                <div className='main-content'>
+                    <Navbar />
+                    <Route exact path='/' component={SectionHome} />
+                    <Route path='/about' component={SectionAbout} />
+                    <Route path='/skills' component={SectionSkills} />
+                    <Route path='/work' component={SectionWork} />
+                    <Route path='/contact' component={SectionContact} />
+                </div>
+            </Router>
         )
     }
 };

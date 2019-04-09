@@ -1,31 +1,42 @@
 .navbar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     background: inherit;
     color: $light-color;    
     font-size: 2rem;
-    padding: 1rem 0;
-    border: none;
-    outline: inherit;
-    cursor: pointer;    
+    height: 4rem;
+    @include transition-line;
     &:hover {
         & i {
-            display: none;                       
+            opacity: 0;
+            @include transition-line;                       
         }
         .navbar-button-name {             
             color: $hover-color;
-            display: inline-block;                         
+            opacity: 1;
+            @include transition-line;                                   
         }         
     }
 }
 
-.navbar-button-name {      
-    display: none; 
+.navbar-button-name {
+    position: absolute;
+    opacity: 0; 
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
+    @include transition-line;
+}
+
+.navbar-button-active {
+    color: $hover-color;
 }
 
 
 @include media-breakpoint-lg {
     .navbar-button {
+        height: 6rem;
         width: 6rem;
     }
 }

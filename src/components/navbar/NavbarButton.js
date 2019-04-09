@@ -1,18 +1,14 @@
 import React, {Component} from 'react';
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
 
 class NavbarButton extends React.Component {
-    constructor(props){
-        super(props);
-    }
 
     render() {
-        let buttonActive = this.props.active ? {color: '#fff200'} : {color: '#999999'};
-        
         return (
-            <button className='navbar-button' style={buttonActive} onClick={this.props.onClick}>
+            <NavLink exact to={this.props.links} className='navbar-button' activeClassName='navbar-button-active'>
                 <i className={this.props.iconName}></i>
                 <span className='navbar-button-name'>{this.props.name.toUpperCase()}</span>
-            </button>
+            </NavLink>
         )
     }
 }
