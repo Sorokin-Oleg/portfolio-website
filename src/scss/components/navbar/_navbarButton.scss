@@ -1,0 +1,49 @@
+.navbar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: inherit;
+    color: $light-color;    
+    font-size: 2rem;
+    height: 4rem;
+    @include transition-line;
+    &:hover {
+        & i {
+            opacity: 0;
+            @include transition-line;                       
+        }
+        .navbar-button-name {             
+            color: $hover-color;
+            opacity: 1;
+            @include transition-line;                                   
+        }         
+    }
+}
+
+.navbar-button-name {
+    position: absolute;
+    opacity: 0; 
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    @include transition-line;
+}
+
+.navbar-button-active {
+    color: $hover-color;
+}
+
+
+@include media-breakpoint-lg {
+    .navbar-button {
+        height: 6rem;
+        width: 6rem;
+    }
+}
+
+@include media-breakpoint-md {
+    .navbar-button {
+        font-size: 1.8rem;
+        width: 5rem;
+    }
+}
