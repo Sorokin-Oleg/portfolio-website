@@ -4,6 +4,7 @@
 @import "utils/mixins";
 @import "components/section/sections";
 
+
 html {
     line-height: $mainLineHeight;
     font-size: $mainFontSize;
@@ -36,3 +37,5 @@ ul, li {
 @import 'components/navbar/navbar';
 @import 'components/navbar/navbarButton';
 @import 'components/navbar/toggleBar';
+@import "components/slider/slider";
+@import 'components/section/components/portfolioCard';
