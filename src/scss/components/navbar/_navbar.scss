@@ -1,5 +1,5 @@
 .navbar-container {
-    background: #1d1d1d;    
+    background: $dark-light-color;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,7 +90,7 @@
     }
 
     #navbar_content {
-        background: #1d1d1d;
+        background: $dark-light-color;
         justify-content: space-around;
         order: 3; 
         position: fixed;

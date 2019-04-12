@@ -1,7 +1,51 @@
 .portfolio-card {
     background: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;       
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:'i t'
+                        'i d'
+                        'i d'
+                        'i d'
+                        'i d'
+                        'i d'
+                        'i b';
+    height: 80vh;
+    outline: 0;      
+}
+
+.portfolio-image-container {
+    grid-area: i;
+    @include flex-center;
+}
+
+.portfolio-technology-container {
+    @include flex-center;
+    flex-wrap: wrap;
+    align-content: center;
+    grid-area: t;    
+}
+
+.technology-item {   
+    color: $light-color;
+    font-size: $fontSizeSmall;
+    height: 2rem;
+    padding: 0 2rem;
+    margin: 0.2rem;
+    border: 0.1rem solid $light-color;
+    border-radius: 10rem;
+    &:hover {
+        color: $hover-color;
+        border-color: $hover-color;
+        @include shadow;
+    }
+}
+
+.portfolio-description-container {
+    grid-area: d;
+    @include flex-center;
+}
+
+.portfolio-button-container {
+    grid-area: b;
+    @include flex-center;
 }
