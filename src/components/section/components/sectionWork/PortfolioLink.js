@@ -4,10 +4,10 @@ const PortfolioLink = (props) => {
     return (
         <div className='portfolio-link-container'>
             <a className='portfolio-link-item' href={props.source} target='_blank'>
-                <i class="fas fa-code"></i> View source
+                <i className="fas fa-code"></i> View source
             </a>
             <a className='portfolio-link-item' href={props.app} target='_blank'>
-                <i class="fas fa-rocket"></i> Go to project
+                <i className="fas fa-rocket"></i> Go to project
             </a>
         </div>
     )
