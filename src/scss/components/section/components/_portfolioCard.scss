@@ -7,8 +7,7 @@
                         'i d'
                         'i d'
                         'i d'
-                        'i d'
-                        'i b';
+                        'i l';
     height: 80vh;
     outline: 0;      
 }
@@ -25,14 +24,14 @@
     grid-area: t;    
 }
 
-.technology-item {   
+.portfolio-technology-item {   
     color: $light-color;
     font-size: $fontSizeSmall;
-    height: 2rem;
     padding: 0 2rem;
     margin: 0.2rem;
     border: 0.1rem solid $light-color;
     border-radius: 10rem;
+    height: 2rem;
     &:hover {
         color: $hover-color;
         border-color: $hover-color;
@@ -45,7 +44,53 @@
     @include flex-center;
 }
 
-.portfolio-button-container {
-    grid-area: b;
+.portfolio-link-container {
+    grid-area: l;
+    align-content: center;
     @include flex-center;
+}
+
+.portfolio-link-item {
+    color: $light-color;
+    border: 0.1rem solid $light-color;
+    border-radius: 10rem;
+    text-align: center;
+    width: 40%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: $fontSizeSmall;
+    &:nth-child(2) {
+        margin-left: 2rem;
+    }
+    &:hover {
+        color: $hover-color;
+        border-color: $hover-color;
+        @include shadow;
+    } 
+}
+
+@include media-breakpoint-lg {
+    .portfolio-card {
+        grid-template-columns: 100%;
+        grid-template-areas:'i'
+                            'i'
+                            'i'
+                            'i'
+                            'i'
+                            'i'
+                            't'
+                            'd'
+                            'd'
+                            'd'
+                            'd'
+                            'l';
+    }
+}
+
+@include media-breakpoint-sm {
+    .portfolio-technology-item {
+        padding: 0 1.5rem;
+        font-size: 1rem;
+        height: 1.5rem;
+    }
 }

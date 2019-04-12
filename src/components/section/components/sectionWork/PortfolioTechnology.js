@@ -1,9 +1,9 @@
 import React, {component} from 'react';
 import PropTypes from 'prop-types';
 
-const TechnologyItems = (props) => {    
+const PortfolioTechnology = (props) => {    
     const item = props.lable.map((element, index) => {
-        return <div className='technology-item' key={index}><span>{element}</span></div> 
+        return <div className='portfolio-technology-item' key={index}>{element}</div> 
     });
 
     return (
@@ -11,13 +11,13 @@ const TechnologyItems = (props) => {
     )
 };
 
-TechnologyItems.defaultProps = {
+PortfolioTechnology.defaultProps = {
     lable: ['none']
 };
 
-TechnologyItems.propTypes = {
+PortfolioTechnology.propTypes = {
     lable: PropTypes.array
 };
 
 
-export default TechnologyItems;
+export default PortfolioTechnology;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
-import PortfolioCard from './components/PortfolioCard'
+import PortfolioCard from './components/sectionWork/PortfolioCard'
 
 class SectionWork extends React.Component {
     constructor(props) {
