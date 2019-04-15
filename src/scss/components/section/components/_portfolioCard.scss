@@ -12,16 +12,55 @@
     outline: 0;      
 }
 
+.portfolio-image-hover {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    @include transition-line;
+    @include flex-center; 
+    flex-direction: column;
+    & i {
+        @include transition-line;
+        font-size: 5rem;
+        padding: 2rem;
+    }
+    & h1 {
+        opacity: 1;
+    }
+
+}
+
 .portfolio-image-container {
+    background-repeat: no-repeat;
     grid-area: i;
     @include flex-center;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 0.2rem;      
+    .image-name-project {
+        opacity: 1;             
+    }
+    &:hover {
+        .image-name-project {
+            opacity: 0;       
+        }
+        .portfolio-image-hover {
+            opacity: 0.7;
+            background: #000;
+            @include transition-line;            
+        }
+    }
 }
 
 .portfolio-technology-container {
     @include flex-center;
     flex-wrap: wrap;
     align-content: center;
-    grid-area: t;    
+    grid-area: t;
+    margin: 1rem 0;    
 }
 
 .portfolio-technology-item {   

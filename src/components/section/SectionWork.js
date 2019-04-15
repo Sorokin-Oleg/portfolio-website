@@ -24,7 +24,7 @@ class SectionWork extends React.Component {
                         <PortfolioCard/>
                         <PortfolioCard/>
                         <PortfolioCard/>
-                        <PortfolioCard/>
+                        <PortfolioCard/>                        
                     </Slider> 
                 </div> 
             </section>
