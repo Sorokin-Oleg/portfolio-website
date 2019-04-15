@@ -1,11 +1,12 @@
 .navbar-container {
-    background: #1d1d1d;    
+    background: $dark-color;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-shrink: 0;
     height: 100vh;
-    width: 6rem;    
+    width: 6rem;
+    z-index: 1000;    
     .navbar-links {
         display: flex;
         flex-direction: column;
@@ -89,7 +90,7 @@
     }
 
     #navbar_content {
-        background: #1d1d1d;
+        background: $dark-color;
         justify-content: space-around;
         order: 3; 
         position: fixed;

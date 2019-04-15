@@ -1,0 +1,149 @@
+.portfolio-card {
+    background: inherit;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:'i t'
+                        'i d'
+                        'i d'
+                        'i d'
+                        'i d'
+                        'i l';
+    height: 80vh;
+    outline: 0;      
+}
+
+.portfolio-image-hover {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    @include transition-line;
+    @include flex-center; 
+    flex-direction: column;
+    & i {
+        @include transition-line;
+        font-size: 5rem;
+        padding: 2rem;
+    }
+    & h1 {
+        opacity: 1;
+    }
+
+}
+
+.portfolio-image-container {
+    background-repeat: no-repeat;
+    grid-area: i;
+    @include flex-center;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 0.2rem;      
+    .image-name-project {
+        opacity: 1;             
+    }
+    &:hover {
+        .image-name-project {
+            opacity: 0;       
+        }
+        .portfolio-image-hover {
+            opacity: 0.7;
+            background: #000;
+            @include transition-line;            
+        }
+    }
+}
+
+.portfolio-technology-container {
+    @include flex-center;
+    flex-wrap: wrap;
+    align-content: center;
+    grid-area: t;
+    margin: 1rem 0;    
+}
+
+.portfolio-technology-item {   
+    color: $light-color;
+    font-size: $fontSizeSmall;
+    padding: 0 2rem;
+    margin: 0.5rem;
+    border: 0.1rem solid $light-color;
+    border-radius: 10rem;
+    height: 2rem;
+}
+
+.portfolio-description-container {
+    color: $light-color;
+    grid-area: d;
+    align-content: center;
+    margin: 1rem 0;
+    padding: 0 2rem;
+    overflow-y: auto;    
+    font-size: $fontSizeSmall;
+}
+
+.portfolio-link-container {
+    grid-area: l;
+    align-content: center;
+    @include flex-center;  
+    padding: 0.5rem 0;  
+}
+
+.portfolio-link-item {
+    color: $light-color;
+    border: 0.1rem solid $light-color;
+    border-radius: 10rem;
+    text-align: center;
+    width: 45%;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: $fontSizeSmall;
+    &:nth-child(2) {
+        margin-left: 2rem;
+    }
+    &:hover {
+        color: $hover-color;
+        border-color: $hover-color;
+        @include shadow;        
+    } 
+}
+
+@include media-breakpoint-lg {
+    .portfolio-card {
+        grid-template-columns: 100%;
+        grid-template-rows: 50%;
+        grid-template-areas:'i'
+                            'i'
+                            'i'
+                            'i'
+                            'i'
+                            'i'
+                            't'
+                            'd'
+                            'd'
+                            'd'
+                            'd'
+                            'l';
+    }
+}
+
+@include media-breakpoint-sm {
+    .portfolio-technology-item {
+        padding: 0 1.5rem;
+        margin: 0.2rem;
+        font-size: 1rem;
+        height: 1.5rem;
+    }
+
+    .portfolio-link-item {
+        font-size: 1.2rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    .portfolio-description-container {
+        padding: 0 1.2rem;
+        font-size: 1.2rem;
+    }
+}

@@ -30,8 +30,10 @@
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
+    "react-slick": "^0.23.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
@@ -40,8 +42,8 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.13",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "slick-carousel": "^1.8.1"
   }
 }
