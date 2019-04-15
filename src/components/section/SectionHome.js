@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Stars from './components/sectionHome/Stars'
 
 class SectionHome extends React.Component {
     constructor(props) {
@@ -7,7 +8,10 @@ class SectionHome extends React.Component {
 
     render() {
         return (
-            <section className='content'><h1>Home</h1></section>
+            <section className='content home-container'>
+                <Stars />
+                <h1>Hello World</h1>
+            </section>
         );
     }
 }
