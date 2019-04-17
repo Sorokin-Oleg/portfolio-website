@@ -18,8 +18,8 @@ class App extends React.Component {
             <Router>
                 <div className='main-content'>
                     <Navbar />
-                    {/* <Route exact path='/' component={SectionHome} /> */}
-                    <Route path='/' component={SectionWork} />
+                    <Route exact path='/' component={SectionHome} />
+                    {/* <Route path='/' component={SectionContact} /> */}
                     <Route path='/about' component={SectionAbout} />
                     <Route path='/skills' component={SectionSkills} />
                     <Route path='/work' component={SectionWork} />
