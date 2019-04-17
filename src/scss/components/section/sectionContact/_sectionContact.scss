@@ -37,10 +37,12 @@
         border-radius: 10rem;
         outline: none;
         padding: 1rem;
+        @include transition-line;
         &:focus {
             color: $default-color;
             border-color: $hover-color;
             @include shadow;
+            @include transition-line;
         }
     }
     & textarea {
@@ -54,10 +56,12 @@
         cursor: pointer;        
         border: 0.1rem solid $light-color;
         border-radius: 10rem;
+        transition: 0ms;
         &:hover {
             color: $hover-color;
             border-color: $hover-color;
             @include shadow;
+            transition: 0ms;
         }
     }
 }

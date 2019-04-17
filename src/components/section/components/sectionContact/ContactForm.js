@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
 class ContactForm extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render () {
         return (
             <div className='form-container'>
