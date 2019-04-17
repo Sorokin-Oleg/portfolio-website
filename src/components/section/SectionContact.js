@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import ContactForm from './components/sectionContact/ContactForm';
+import { YMaps, Map } from 'react-yandex-maps';
+
 
 class SectionContact extends React.Component {
     constructor(props) {
@@ -7,7 +10,12 @@ class SectionContact extends React.Component {
 
     render() {
         return (
-            <section className='content'><h1>Contact</h1></section>
+            <section className='content contact-container'>
+                <ContactForm />
+                <YMaps>                                     
+                    <Map defaultState={{ center: [53.90, 27.56], zoom: 11 }} width='100%' height='100%'/>               
+                </YMaps>
+            </section>
         );
     }
 }
