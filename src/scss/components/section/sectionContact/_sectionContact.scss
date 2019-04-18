@@ -1,3 +1,5 @@
+@import './earth/earth';
+
 .contact-container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -23,6 +25,11 @@
     }
     & a {
         color: $default-color;
+        @include transition-line; 
+        &:hover {
+            color: $hover-color;
+            @include transition-line;            
+        }
     }
 }
 

@@ -1,0 +1,80 @@
+.earth-container {
+    position: relative;
+    @include flex-center;
+}
+
+@mixin transform($info) {
+    transform: $info;
+        -webkit-transform: $info;
+        -moz-transform: $info;
+        -ms-transform: $info;
+}
+
+@mixin browsers($info) {
+    animation: $info;
+        -webkit-animation: $info;
+        -moz-animation: $info;
+        -ms-animation: $info;
+        -o-animation: $info;
+}
+
+@mixin animation($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+}
+
+.earth {
+    position: absolute;
+    border-radius: 100%;
+    background-color: $earth-sea;
+    box-shadow: inset -1rem -1rem $earth-sea - 15;
+    height: 20rem;
+    width: 20rem;
+    @include browsers(earthJump 3s -1.5s linear infinite);
+    &:before {            
+        border-radius: 100%;
+        background-color: $earth-green;
+        border-radius: 100% 70% 100% 70%;
+        content: '';
+        height: 12rem;
+        left: 1.2rem;
+        position: absolute;
+        top: 6rem;
+        width: 6rem;
+        @include transform(rotate(-30deg));
+    }
+    &:after {
+        @extend .earth:before;
+        height: 4.5rem;
+        left: 11rem;
+        top: 1rem;
+        width: 4rem;
+        @include transform(rotate(-45deg));
+    }
+}
+
+/* planet animation */
+@include animation(earthJump) {
+    0% {
+        top: -10rem;
+    }
+    30% {
+        top: -9rem;
+    }
+    70% {
+        top: -11rem;
+    }
+    100% {
+        top: -10rem;
+    }
+}
