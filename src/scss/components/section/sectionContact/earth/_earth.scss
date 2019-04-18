@@ -78,3 +78,9 @@
         top: -10rem;
     }
 }
+
+@include media-breakpoint-sm {
+    .earth-container {
+        display: none;
+    }
+}

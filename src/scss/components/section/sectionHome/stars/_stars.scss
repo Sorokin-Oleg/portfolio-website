@@ -43,6 +43,7 @@ $shadows-big:    multiple-box-shadow(100);
     background: transparent;
     box-shadow: $shadows-medium;
     animation: animStar 120s linear infinite;
+    border-radius: 100%;
     &:after {
         content: " ";
         position: absolute;
@@ -60,6 +61,7 @@ $shadows-big:    multiple-box-shadow(100);
     background: transparent;
     box-shadow: $shadows-big;
     animation: animStar 170s linear infinite;
+    border-radius: 100%;
     &:after {
         content: " ";
         position: absolute;
