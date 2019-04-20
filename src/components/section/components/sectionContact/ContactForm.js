@@ -10,7 +10,7 @@ class ContactForm extends React.Component {
             email: '',
             subject: '',
             message: '',
-            modal: false
+            modal: true
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);

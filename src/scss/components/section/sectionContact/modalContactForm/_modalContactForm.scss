@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;    
     font-size: $fontSizeSmall;
+    text-align: center;
     height: 100vh;
     width: 100vw;
     position: fixed;    
@@ -38,6 +39,30 @@
             @include shadow;
             color: $hover-color;
             border-color: $hover-color;
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .modal-contact-form-container {
+        padding: 0 4rem;
+        & button {
+            width: 25vw;
+        }
+    }
+}
+
+@include media-breakpoint-sm {
+    .modal-contact-form-container {
+        background: $dark-color;
+        padding: 0 2rem;
+        font-size: 1.2rem;
+        & button {
+            margin: 1rem 0;       
+            min-width: 90vw;           
+        }
+        & h1 {
+            font-size: 2.2rem;
         }
     }
 }
