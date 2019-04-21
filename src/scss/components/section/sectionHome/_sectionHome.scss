@@ -4,3 +4,44 @@
 .home-container {
     position: relative;
 }
+
+.home-content {
+    text-align: center;
+    z-index: 1000;
+    & h1 {
+        letter-spacing: 0.5rem;
+        font-size: 3rem;
+        font-weight: 400;
+        margin: 1.5rem;
+    }
+    & img {
+        width: 30rem;
+        margin-bottom: 2rem;
+    }   
+    & span {
+        color: $hover-color;
+    } 
+}
+
+@include media-breakpoint-md {
+    .home-content {
+        & h1 {
+            letter-spacing: 0.2rem;
+        }
+        & img {
+            width: 25rem;
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .home-content {
+        & h1 {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+        & img {
+            width: 20rem;
+        }
+    }
+}
