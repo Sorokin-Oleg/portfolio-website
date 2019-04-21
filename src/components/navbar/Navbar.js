@@ -22,7 +22,7 @@ class Navbar extends React.Component {
 
         return (
             <section className='navbar-container'>
-                <div id='navbar_logo'></div>
+                <div id='navbar_logo'><img src="assets/img/home_logo.svg" alt="Sorokin Oleg - Frontend Developer"/></div>
                 <nav id='navbar_content' className={navOpen}>
                     <NavbarButton links='/' name='home' iconName='fas fa-home'/>
                     <NavbarButton links='/about/' name='about' iconName='fas fa-user'/>
@@ -37,7 +37,7 @@ class Navbar extends React.Component {
                         <li><a href="https://vk.com/sorokin_robots" target="_blank"><i className="fab fa-vk"></i></a></li>
                     </ul>                    
                 </div>
-                <ToggleBar active={this.state.toggleActive} onClick={() => this.toggleBarActive()}/>
+                <ToggleBar active={this.state.toggleActive} onClick={this.toggleBarActive}/>
             </section>
         )
     }    
