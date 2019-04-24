@@ -5,7 +5,7 @@ const Earth = () => {
         <div className='earth-container'>
             <div className="earth"></div>
         </div>
-    )
-}
+    );
+};
 
 export default Earth;

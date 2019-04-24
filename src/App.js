@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom" 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navbar from './components/navbar/Navbar';
 import SectionHome from './components/section/SectionHome';
 import SectionAbout from './components/section/SectionAbout';
@@ -11,7 +11,7 @@ import SectionContact from './components/section/SectionContact';
 class App extends React.Component {
     constructor(props){
         super(props);
-    }
+    };
 
     render() {
         return (
@@ -26,8 +26,8 @@ class App extends React.Component {
                     <Route path='/contact' component={SectionContact} />
                 </div>
             </Router>
-        )
-    }
+        );
+    };
 };
 
 export default App;

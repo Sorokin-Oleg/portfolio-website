@@ -9,6 +9,6 @@ const SectionContact = () => {
             <Earth/>
         </section>
     );
-}
+};
 
 export default SectionContact;
