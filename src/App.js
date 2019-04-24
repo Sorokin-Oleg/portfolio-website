@@ -19,7 +19,7 @@ class App extends React.Component {
                 <div className='main-content'>
                     <Navbar />
                     <Route exact path='/' component={SectionHome} />
-                    {/* <Route path='/' component={SectionSkills} /> */}
+                    {/* <Route path='/' component={SectionAbout} /> */}
                     <Route path='/about' component={SectionAbout} />
                     <Route path='/skills' component={SectionSkills} />
                     <Route path='/work' component={SectionWork} />

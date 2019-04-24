@@ -36,11 +36,15 @@
             }
         }
     }
-    .regular-item-img {
+    .regular-item-image {
         @include flex-center;
         flex-direction: column;
         & img {            
-            margin: 1.5rem; 
+            margin: 1.5rem;
+            @include transition-line;
+            &:hover {
+                filter: drop-shadow(0 0 20px #fff);                
+            } 
         }
     }
     .regular-image-container {
@@ -83,7 +87,7 @@
                 font-size: 1.2rem;
             }
         }
-        .regular-item-img {
+        .regular-item-image {
             & img {
                 margin: 1rem;
             }            

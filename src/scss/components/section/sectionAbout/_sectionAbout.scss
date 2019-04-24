@@ -1,0 +1,29 @@
+.photo-container {
+    @include flex-center;
+    margin: 2rem 0;
+    padding: 0;     
+    & img {
+        width: 35rem; 
+        border-radius: 50%;
+        @include transition-line;
+        &:hover {
+            filter: drop-shadow(0 0 20px #fff); 
+        }       
+    }
+}
+
+@include media-breakpoint-lg {
+    .photo-container {
+        & img {
+            width: 30rem;
+        }
+    }
+} 
+
+@include media-breakpoint-sm {
+    .photo-container {
+        & img {
+            width: 25rem;
+        }
+    }
+}

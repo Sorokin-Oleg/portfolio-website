@@ -8,7 +8,7 @@ const SectionSkills = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam luctus semper. Curabitur auctor fringilla pulvinar. Donec placerat elit in finibus fringilla. Praesent ac dignissim tortor. Integer tristique congue orci a venenatis. In hac habitasse platea dictumst. Cras pretium lectus ex, eu cursus nibh vulputate at. Phasellus pellentesque et turpis id vulputate. Donec sit amet tortor erat. Nullam cursus urna ac magna pretium suscipit. Donec vestibulum ut libero at porttitor. Pellentesque et urna quis sapien sodales mollis eget nec nisl. Pellentesque bibendum leo sit amet rhoncus tempus. Maecenas porta luctus molestie.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquam luctus semper. Curabitur auctor fringilla pulvinar. Donec placerat elit in finibus fringilla. Praesent ac dignissim tortor. Integer tristique congue orci a venenatis. In hac habitasse platea dictumst. Cras pretium lectus ex, eu cursus nibh vulputate at. Phasellus pellentesque et turpis id vulputate. Donec sit amet tortor erat. Nullam cursus urna ac magna pretium suscipit. Donec vestibulum ut libero at porttitor. Pellentesque et urna quis sapien sodales mollis eget nec nisl. Pellentesque bibendum leo sit amet rhoncus tempus. Maecenas porta luctus molestie.</p>
             </div>
-            <div className='regular-item-img'>
+            <div className='regular-item-image'>
                 <div className='regular-image-container'>
                     <img src="/assets/img/icons/html.svg" alt="HTML" style={{height:'50px'}} />
                     <img src="/assets/img/icons/css.svg" alt="CSS" style={{height:'50px'}} />
