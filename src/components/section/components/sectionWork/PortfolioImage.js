@@ -1,6 +1,5 @@
 import React, {component} from 'react';
 
-
 class PortfolioImage extends React.Component {
     render () {
         return (
@@ -11,13 +10,13 @@ class PortfolioImage extends React.Component {
                     <h1>Go to Gallery</h1>
                 </div>                 
             </div>
-        )        
-    }
-}
+        );       
+    };
+};
 
 PortfolioImage.defaultProps = {
     nameProject: 'Good Project',
     bgImage: {backgroundColor: '#eb4d4b'}
-}
+};
 
 export default PortfolioImage;

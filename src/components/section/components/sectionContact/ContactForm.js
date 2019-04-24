@@ -18,7 +18,7 @@ class ContactForm extends React.Component {
         this.closeModal = this.closeModal.bind(this);
         this.escCloseModal = this.escCloseModal.bind(this);
         this.copyMessage = this.copyMessage.bind(this);        
-    }
+    };
 
     handleInputChange(event) {
         const target = event.target;
@@ -28,12 +28,12 @@ class ContactForm extends React.Component {
         this.setState({
             [name]: value
         });
-    }
+    };
 
     handleSubmit(event) {
         this.setState({modal:true});
         event.preventDefault();
-    }
+    };
 
     /**
      * Copy text to clipboard
@@ -41,7 +41,7 @@ class ContactForm extends React.Component {
     copyMessage() {
         navigator.clipboard.writeText(this.state.message);
         this.closeModal();
-    }
+    };
 
     /**
      * When closing the modal window we clean the forms
@@ -49,7 +49,7 @@ class ContactForm extends React.Component {
     closeModal() {
         this.setState({modal:false});
         this.setState({name:'',email:'',subject:'',message:''})
-    }
+    };
 
     /**
      * The function monitors the status of the modal window and the events of the pressed ESC button.
@@ -59,15 +59,15 @@ class ContactForm extends React.Component {
         if(event.keyCode === 27 && this.state.modal) {
             this.closeModal();
         }; 
-    }
+    };
 
     componentDidMount() {
         document.addEventListener('keydown', this.escCloseModal, false);
-    }
+    };
     
     componentWillUnmount() {
         document.addEventListener('keydown', this.escCloseModal, false);
-    }
+    };
 
     render () {
         return (
@@ -98,8 +98,8 @@ class ContactForm extends React.Component {
                 <ModalContactForm modal={this.state.modal} name={this.state.name}
                                   closeModal={this.closeModal} copyMessage={this.copyMessage} />
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default ContactForm;

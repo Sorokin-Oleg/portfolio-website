@@ -10,12 +10,12 @@ const PortfolioLink = (props) => {
                 <i className="fas fa-rocket"></i> Go to project
             </a>
         </div>
-    )
-}
+    );
+};
 
 PortfolioLink.defaultProps = {
     source: 'https://github.com/Sorokin-Oleg',
     app: 'https://github.com/Sorokin-Oleg'
-}
+};
 
 export default PortfolioLink;

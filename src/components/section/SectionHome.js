@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Stars from './components/sectionHome/Stars'
+import Stars from './components/sectionHome/Stars';
 
 const SectionHome = () => {
     return (
@@ -12,6 +12,6 @@ const SectionHome = () => {
             </div>
         </section>
     );
-}
+};
 
 export default SectionHome;

@@ -34,6 +34,6 @@ const SectionSkills = () => {
             </div>
         </section>
     );
-}
+};
 
 export default SectionSkills;

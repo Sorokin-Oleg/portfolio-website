@@ -8,7 +8,7 @@ const PortfolioTechnology = (props) => {
 
     return (
         <div className='portfolio-technology-container'>{item}</div>
-    )
+    );
 };
 
 PortfolioTechnology.defaultProps = {

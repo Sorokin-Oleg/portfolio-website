@@ -13,8 +13,8 @@ class PortfolioCard extends React.Component {
                 <PortfolioDescription/>
                 <PortfolioLink/>                
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default PortfolioCard;

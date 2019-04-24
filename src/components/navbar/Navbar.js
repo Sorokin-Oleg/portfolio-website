@@ -8,14 +8,14 @@ class Navbar extends React.Component {
 
         this.state = {toggleActive: false}
         this.toggleBarActive = this.toggleBarActive.bind(this);
-    }    
+    };  
     /**
      * The method performed by the ToggleBar component.
      * Sets the state of the mobile menu (state: toggleActive).
      */
     toggleBarActive() {
         this.setState({toggleActive: !this.state.toggleActive});
-    }
+    };
     
     render() {        
         let navOpen = this.state.toggleActive ? 'navbar-open' : 'navbar-close';
@@ -39,8 +39,8 @@ class Navbar extends React.Component {
                 </div>
                 <ToggleBar active={this.state.toggleActive} onClick={this.toggleBarActive}/>
             </section>
-        )
-    }    
+        );
+    };    
 };
 
 export default Navbar; 
