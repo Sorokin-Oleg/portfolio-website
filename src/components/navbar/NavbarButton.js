@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import { HashRouter as Route, NavLink } from "react-router-dom";
 
 const NavbarButton = (props) => {
     return (
