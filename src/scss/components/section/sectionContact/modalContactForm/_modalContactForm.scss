@@ -8,11 +8,11 @@
     font-size: $fontSizeSmall;
     text-align: center;
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw + 6rem);
     position: fixed;    
     top: 0;
     left: 0;
-    z-index: 2000;
+    z-index: 1;
     & p {
         margin: 0.5rem 0;
     }
@@ -40,6 +40,12 @@
             color: $hover-color;
             border-color: $hover-color;
         }
+    }
+}
+
+@include media-breakpoint-lg {
+    .modal-contact-form-container {
+        width: 100%;
     }
 }
 
