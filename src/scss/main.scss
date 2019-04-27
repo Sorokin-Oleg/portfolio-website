@@ -2,8 +2,8 @@
 @import "utils/fonts";
 @import "utils/variables";
 @import "utils/mixins";
+@import "utils/modal_animation";
 @import "components/section/sections";
-
 
 html {
     line-height: $mainLineHeight;

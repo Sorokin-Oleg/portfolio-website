@@ -4,7 +4,7 @@ const ModalContactForm = (props) => {
     let displayState = props.modal ? 'flex':'none';
 
     return(
-        <div className='modal-contact-form-container' style={{display:displayState}}>
+        <div className='modal-contact-form-container modal-open' style={{display:displayState}}>
                 <h1>Hi, {props.name}!</h1>                    
                 <p>This is demo form.</p>
                 <p>To contact me please use <a href="https://www.linkedin.com/" target='_blank'>LinkedIn</a>.</p>
