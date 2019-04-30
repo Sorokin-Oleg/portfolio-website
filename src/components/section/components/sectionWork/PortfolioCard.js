@@ -5,13 +5,16 @@ import PortfolioDescription from './PortfolioDescription';
 import PortfolioImage from './PortfolioImage';
 
 class PortfolioCard extends React.Component {
+    constructor(props){
+        super(props);
+    };
     render() {
         return (
             <div className='portfolio-card'>
-                <PortfolioImage/>
-                <PortfolioTechnology lable={['React', 'Sass', 'API', 'React-Router', 'JSON', 'Socet IO']}/>
-                <PortfolioDescription/>
-                <PortfolioLink/>                
+                <PortfolioImage nameProject={this.props.nameProject} coverColor={this.props.coverColor}/>
+                <PortfolioTechnology lable={this.props.lable}/>
+                <PortfolioDescription description={this.props.description}/>
+                <PortfolioLink sourceLink={this.props.sourceLink} appLink={this.props.appLink}/>                          
             </div>
         );
     };
