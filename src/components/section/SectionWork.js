@@ -76,7 +76,8 @@ class SectionWork extends React.Component {
                 </div>
                 <ModalGallary 
                     imageData={PORTFOLIO_DATA[this.props.modal.modalActiveIndex].imageData} 
-                    modalActive={this.props.modal.modalActive}                    
+                    modalActive={this.props.modal.modalActive}
+                    modalClose={this.modalClose}                   
                 />                           
             </section>
         );

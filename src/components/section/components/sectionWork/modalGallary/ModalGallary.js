@@ -4,10 +4,10 @@ import Slider from "react-slick";
 const ModalGallary = (props) => {    
 
     const settings = {
-        dots: true,
+        dots: true,        
         lazyLoad: true,
         infinite: true,
-        speed: 1000,
+        speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 2
@@ -25,7 +25,10 @@ const ModalGallary = (props) => {
     
     return(
         <div className='modal-gallary-container'style={modalState}>
-            <div className='slider-content'>
+            <button className='modal-gallary-button-close' onClick={props.modalClose}>
+                <i className="fas fa-times"></i>
+            </button>
+            <div className='slider-content'>                
                 <Slider {...settings}>
                     {image}
                 </Slider>

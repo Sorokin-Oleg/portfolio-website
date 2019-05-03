@@ -7,8 +7,24 @@ export const PORTFOLIO_DATA = [
         sourceLink: 'https://github.com/VizanArkonin/OrangeTree',
         appLink: '#',
         imageData: {
-            image: ['1','2','3','4','5','6','7'],
-            alt: ['1','2','3','4','5','6','7']
+            image: [
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg'
+            ],
+            alt: [
+                'description',
+                'description',
+                'description',
+                'description',
+                'description',
+                'description',
+                'description'
+            ]
         }               
     },
     {
@@ -19,9 +35,25 @@ export const PORTFOLIO_DATA = [
         sourceLink: '#',
         appLink: '#',
         imageData: {
-            image: ['11','22','33','44','55','66','77'],
-            alt: ['11','22','33','44','55','66','77']
-        }                 
+            image: [
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg'
+            ],
+            alt: [
+                'description',
+                'description',
+                'description',
+                'description',
+                'description',
+                'description',
+                'description'
+            ]
+        }               
     },
     {
         nameProject: 'Portfolio App',
@@ -31,8 +63,24 @@ export const PORTFOLIO_DATA = [
         sourceLink: 'https://github.com/Sorokin-Oleg/my_portfolio',
         appLink: '#',
         imageData: {
-            image: ['111','222','333','444','555','666','777'],
-            alt: ['111','222','333','444','555','666','777']
-        }                  
+            image: [
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
+                '/assets/img/portfolio-image/orange-tree/img-1.jpg'
+            ],
+            alt: [
+                'description',
+                'description',
+                'description',
+                'description',
+                'description',
+                'description',
+                'description'
+            ]
+        }                   
     }
 ];
