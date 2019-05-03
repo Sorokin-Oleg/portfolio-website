@@ -1,11 +1,46 @@
 import React, {Component} from 'react';
+import { connect, dispatch } from 'react-redux';
 import Slider from "react-slick";
 import PortfolioCard from './components/sectionWork/PortfolioCard';
 import ModalGallary from './components/sectionWork/modalGallary/ModalGallary';
+import { PORTFOLIO_DATA } from './../constant/portfolioData';
 
 class SectionWork extends React.Component {
     constructor(props) {
         super(props);
+
+        this.modalClose = this.modalClose.bind(this);
+        this.escCloseModal = this.escCloseModal.bind(this);
+    }
+
+    modalClose() {
+        const data = {
+            modalActiveIndex:0,
+            modalActive: false
+        };
+
+        this.props.dispatch({
+            type: "MODAL_ACTIVE",
+            data
+        });
+    };
+
+    /**
+     * The function monitors the status of the modal window and the events of the pressed ESC button.
+     * Subject to the conditions, runs the function of closing the modal window
+     */
+    escCloseModal(event) {
+        if(event.keyCode === 27 && this.props.modal.modalActive) {
+            this.modalClose();
+        }; 
+    };
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.escCloseModal, false);
+    };
+    
+    componentWillUnmount() {
+        document.addEventListener('keydown', this.escCloseModal, false);
     };
 
     render() {
@@ -15,49 +50,23 @@ class SectionWork extends React.Component {
             speed: 1000,
             slidesToShow: 1,
             slidesToScroll: 1
-        };
-
-        const portfolioData = [
-            {
-                nameProject: 'Orange Tree',
-                coverColor: {backgroundColor: '#e67e22'},
-                lable:['SASS', 'jQuery', 'API', 'JSON', 'Socet IO', 'Highcharts'],
-                description: 'none',
-                sourceLink: 'https://github.com/VizanArkonin/OrangeTree',
-                appLink: '#'
-            },
-            {
-                nameProject: 'Weather App',
-                coverColor: {backgroundColor: '#16a085'},
-                lable:['React', 'Redux', 'SASS', 'API', 'JSON'],
-                description: 'none',
-                sourceLink: '#',
-                appLink: '#'
-            },
-            {
-                nameProject: 'Portfolio App',
-                coverColor: {backgroundColor: '#8854d0'},
-                lable:['React', 'React-Router', 'Redux', 'SASS'],
-                description: 'none',
-                sourceLink: 'https://github.com/Sorokin-Oleg/my_portfolio',
-                appLink: '#'
-            }
-        ];
-
-        const portfolioCard = portfolioData.map((element, index) => {
+        };    
+    
+        const portfolioCard = PORTFOLIO_DATA.map((element, index) => {
             return(
                 <PortfolioCard
                     key={index}
+                    id={index}
                     nameProject={element.nameProject}
-                    coverColor={element.coverColor}
+                    coverImage={element.coverImage}
                     lable={element.lable}
                     description={element.description}
                     sourceLink={element.sourceLink}
                     appLink={element.appLink}
                 />
             );
-        });
-
+        });              
+            
         return (
             <section className='content'>
                 <div className='slider-content'>
@@ -65,10 +74,19 @@ class SectionWork extends React.Component {
                         {portfolioCard}
                     </Slider> 
                 </div>
-                <ModalGallary/>                
+                <ModalGallary 
+                    imageData={PORTFOLIO_DATA[this.props.modal.modalActiveIndex].imageData} 
+                    modalActive={this.props.modal.modalActive}                    
+                />                           
             </section>
         );
+    };    
+};
+
+const mapStateToProps = state => {
+    return {
+        modal: state        
     };
 };
 
-export default SectionWork;
+export default connect(mapStateToProps) (SectionWork);

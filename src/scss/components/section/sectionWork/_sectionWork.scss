@@ -37,6 +37,8 @@
 
 .portfolio-image-container {
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     grid-area: i;
     @include flex-center;
     position: relative;
