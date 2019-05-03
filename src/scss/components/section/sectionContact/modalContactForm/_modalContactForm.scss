@@ -1,5 +1,5 @@
 .modal-contact-form-container {
-    background: rgba(0,0,0,0.8);
+    background: $modal-bg;
     color: $light-color;
     display: none;
     justify-content: center;
@@ -63,6 +63,8 @@
         background: $dark-color;
         padding: 0 2rem;
         font-size: 1.2rem;
+        top: 6rem;
+        height: calc(100%-6rem);
         & button {
             margin: 1rem 0;       
             min-width: 90vw;           
