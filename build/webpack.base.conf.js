@@ -18,9 +18,9 @@ module.exports = {
         app: PATHS.src
     },
     output: {
-        filename: `${PATHS.assets}js/[name].js`,
+        filename: `./${PATHS.assets}js/[name].js`,
         path: PATHS.dist,
-        publicPath: '/'
+        publicPath: ''
     },
     module: {
         rules: [{
@@ -34,12 +34,8 @@ module.exports = {
                 name: '[name].[ext]'
                 }
             }, {
-            test: /\.(eot|svg|ttf|woff|woff2)$/,
-            use: [
-                {
-                    loader: 'file-loader?name=./assets/fonts/[name].[ext]'
-                }
-            ]
+            test: /\.(eot|svg|ttf|woff|woff2)$/,            
+            loader: 'url-loader?limit=100000?name=./assets/fonts/[name].[ext]'
             }, {
             test: /\.scss$/,
             use: [
@@ -76,7 +72,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].css`,
+            filename: `./${PATHS.assets}css/[name].css`,
         }),
         // Copy HtmlWebpackPlugin and change index.html for another html page
         new HtmlWebpackPlugin({
@@ -87,6 +83,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },      
             { from: `${PATHS.src}/static`, to: '' },
+            { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` }
         ])
     ],
 };
