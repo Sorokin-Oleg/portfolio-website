@@ -8,13 +8,13 @@ export const PORTFOLIO_DATA = [
         appLink: '#',
         imageData: {
             image: [
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg'
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg'
             ],
             alt: [
                 'description',
@@ -36,13 +36,13 @@ export const PORTFOLIO_DATA = [
         appLink: '#',
         imageData: {
             image: [
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg'
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg'
             ],
             alt: [
                 'description',
@@ -64,13 +64,13 @@ export const PORTFOLIO_DATA = [
         appLink: '#',
         imageData: {
             image: [
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg',
-                '/assets/img/portfolio-image/orange-tree/img-1.jpg'
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg',
+                './assets/img/portfolio-image/orange-tree/img-1.jpg'
             ],
             alt: [
                 'description',

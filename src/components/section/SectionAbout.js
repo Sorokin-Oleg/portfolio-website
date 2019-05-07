@@ -10,7 +10,7 @@ const SectionAbout =() => {
             </div>
             <div className='regular-item-img'>
                 <dir className='photo-container'>
-                    <img src="/assets/img/my-photo-circle.jpg" alt="My photo"/>
+                    <img src="./assets/img/my-photo-circle.jpg" alt="My photo"/>
                 </dir>
             </div>
         </section>
