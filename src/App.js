@@ -22,8 +22,7 @@ class App extends React.Component {
                     <Route path='/skills' component={SectionSkills} />
                     <Route path='/work' component={SectionWork} />
                     <Route path='/contact' component={SectionContact} />
-                </Router>
-                <div className='rotate'></div>
+                </Router>                                                                 
             </div>                       
         );
     };

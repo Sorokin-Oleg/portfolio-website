@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect, dispatch } from 'react-redux';
 import Slider from "react-slick";
 import PortfolioCard from './components/sectionWork/PortfolioCard';
-import ModalGallary from './components/sectionWork/modalGallary/ModalGallary';
+import ModalGallery from './components/sectionWork/ModalGallery';
 import { PORTFOLIO_DATA } from './../constant/portfolioData';
 
 class SectionWork extends React.Component {
@@ -40,7 +40,7 @@ class SectionWork extends React.Component {
     };
     
     componentWillUnmount() {
-        document.addEventListener('keydown', this.escCloseModal, false);
+        document.removeEventListener('keydown', this.escCloseModal, false);
     };
 
     render() {
@@ -68,18 +68,21 @@ class SectionWork extends React.Component {
         });              
             
         return (
-            <section className='content content-overflow-y'>
-                <div className='slider-content'>
-                    <Slider {...settings}>
-                        {portfolioCard}
-                    </Slider> 
+            <section>
+                <div className='content content-overflow-y'>
+                    <div className='slider-content'>
+                        <Slider {...settings}>
+                            {portfolioCard}
+                        </Slider> 
+                    </div>
+                    <ModalGallery 
+                        imageData={PORTFOLIO_DATA[this.props.modal.modalActiveIndex].imageData} 
+                        modalActive={this.props.modal.modalActive}
+                        modalClose={this.modalClose}                   
+                    />                                                                            
                 </div>
-                <ModalGallary 
-                    imageData={PORTFOLIO_DATA[this.props.modal.modalActiveIndex].imageData} 
-                    modalActive={this.props.modal.modalActive}
-                    modalClose={this.modalClose}                   
-                />                           
-            </section>
+                <div className='rotate'></div>
+            </section>   
         );
     };    
 };
