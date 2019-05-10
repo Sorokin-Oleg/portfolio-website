@@ -66,16 +66,16 @@
 /* planet animation */
 @include animation(earthJump) {
     0% {
-        top: -10rem;
+        top: 40%;
     }
     30% {
-        top: -9rem;
+        top: 42%;
     }
     70% {
-        top: -11rem;
+        top: 38%;
     }
     100% {
-        top: -10rem;
+        top: 40%;
     }
 }
 

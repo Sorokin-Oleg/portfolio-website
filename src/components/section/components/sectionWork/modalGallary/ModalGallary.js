@@ -28,7 +28,7 @@ const ModalGallary = (props) => {
             <button className='modal-gallary-button-close' onClick={props.modalClose}>
                 <i className="fas fa-times"></i>
             </button>
-            <div className='slider-content'>                
+            <div className='slider-modal-content'>                
                 <Slider {...settings}>
                     {image}
                 </Slider>
