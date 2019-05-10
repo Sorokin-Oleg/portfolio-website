@@ -1,5 +1,11 @@
 .slider-content {
     width: 85%;    
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+
+.slider-modal-content {
+    width: 85%;
 }
 
 .slick-prev, .slick-next {
@@ -46,6 +52,9 @@
     .slider-content {
         width: 80%;
     }
+    .slider-modal-content {
+        width: 80%;
+    }
     .slick-prev {
         left: -50px;
     }
@@ -68,6 +77,9 @@
 
 @include media-breakpoint-sm {
     .slider-content {        
+        min-width: 100%;
+    }
+    .slider-modal-content {
         min-width: 100%;
     }
     .slick-arrow, .slick-next:before, .slick-prev:before {

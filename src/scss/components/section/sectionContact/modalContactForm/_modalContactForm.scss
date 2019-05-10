@@ -5,10 +5,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;    
-    font-size: $fontSizeSmall;
+    font-size: $fontSizeDefault;
     text-align: center;
-    height: 100vh;
-    width: calc(100vw + 6rem);
+    height: 100%;
+    width: calc(100% + 6rem);
     position: fixed;    
     top: 0;
     left: 0;
@@ -62,7 +62,7 @@
     .modal-contact-form-container {
         background: $dark-color;
         padding: 0 2rem;
-        font-size: 1.2rem;
+        font-size: $fontSizeSmall;
         top: 6rem;
         height: calc(100%-6rem);
         & button {

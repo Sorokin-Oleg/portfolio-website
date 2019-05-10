@@ -68,7 +68,7 @@ class SectionWork extends React.Component {
         });              
             
         return (
-            <section className='content'>
+            <section className='content content-overflow-y'>
                 <div className='slider-content'>
                     <Slider {...settings}>
                         {portfolioCard}

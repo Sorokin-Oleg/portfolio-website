@@ -4,6 +4,8 @@
 .contact-container {
     display: grid;
     grid-template-columns: 60% 40%;
+    height: 100%;
+    width: 100%;    
 }
 
 .form-container {
@@ -18,7 +20,7 @@
     margin-bottom: 1.5rem;
     & p {
         color: $light-color;
-        font-size: $fontSizeSmall;
+        font-size: $fontSizeDefault;
     }
     & h1 {
         font-size: 3rem;
@@ -35,7 +37,7 @@
 }
 
 .form-content { 
-    font-size:  $fontSizeSmall;
+    font-size:  $fontSizeDefault;
     & input[type=text], input[type=email], input[type=submit], textarea {
         background: $dark-color;
         color: $light-color;
@@ -103,10 +105,10 @@
         padding: 0 2rem;
     }
     .form-content {
-        font-size: 1.2rem;
+        font-size: $fontSizeSmall;
     }
     .form-head {
-        font-size: 1.2rem;
+        font-size: $fontSizeSmall;
         & h1 {
             font-size: 2.2rem;
         }

@@ -4,9 +4,11 @@ import Earth from './components/sectionContact/Earth';
 
 const SectionContact = () => {
     return (
-        <section className='content contact-container'>
-            <ContactForm />
-            <Earth/>
+        <section className='content'>
+            <div className='contact-container'>
+                <ContactForm />
+                <Earth/>
+            </div>
         </section>
     );
 };
