@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Stars from './components/sectionHome/Stars';
+import Rotate from './components/Rotate';
 
 const SectionHome = () => {
     return (
@@ -14,7 +15,7 @@ const SectionHome = () => {
                     </div>
                 </div>            
             </div>
-            <div className='rotate'></div>
+           <Rotate/>
         </section>
     );
 };

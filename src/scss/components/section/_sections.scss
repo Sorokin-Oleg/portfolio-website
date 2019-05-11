@@ -97,8 +97,6 @@
 
 @media (max-width:$mediumWidth) and (orientation: landscape) {
     .rotate {    
-        background: #212121 url('/../../assets/img/rotate.jpg') no-repeat center;
-        background-size: 100% auto;
         position: fixed;
         top: 0;
         left: 0;

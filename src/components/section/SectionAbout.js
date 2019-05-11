@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Rotate from './components/Rotate';
 
 const SectionAbout =() => {
     return (
@@ -17,7 +18,7 @@ const SectionAbout =() => {
                     </div>
                 </div>
             </div>
-            <div className='rotate'></div>
+            <Rotate/>
         </section>
     );
 };

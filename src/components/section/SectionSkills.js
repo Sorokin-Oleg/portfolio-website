@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Rotate from './components/Rotate';
 
 const SectionSkills = () => {
     return (
@@ -36,7 +37,7 @@ const SectionSkills = () => {
                     </div>
                 </div>
             </div>
-            <div className='rotate'></div>
+            <Rotate/>
         </section>
     );
 };
