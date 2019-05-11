@@ -35,9 +35,9 @@ module.exports = {
                 }
             }, {
             test: /\.(eot|svg|ttf|woff|woff2)$/,            
-            loader: 'url-loader?limit=100000?name=./assets/fonts/[name].[ext]'
+            loader: 'url-loader?name=./assets/fonts/[name].[ext]'
             }, {
-            test: /\.scss$/,
+            test: /\.scss$/,            
             use: [
                 'style-loader',
                 MiniCssExtractPlugin.loader,
@@ -72,7 +72,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `./${PATHS.assets}css/[name].css`,
+            filename: `./${PATHS.assets}css/[name].css`
         }),
         // Copy HtmlWebpackPlugin and change index.html for another html page
         new HtmlWebpackPlugin({

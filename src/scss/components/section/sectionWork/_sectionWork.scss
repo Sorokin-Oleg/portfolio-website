@@ -1,4 +1,4 @@
-@import './modalGallary/modalGallary';
+@import './modalGallery/modalGallery';
 
 .portfolio-card {
     background: inherit;
@@ -165,8 +165,8 @@
         flex-direction: column;
         .portfolio-link-item {
             font-size: $fontSizeSmall;
-            height: 3rem;
-            line-height: 3rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
             width: 100%;
             margin: 0;
             &:nth-child(2) {

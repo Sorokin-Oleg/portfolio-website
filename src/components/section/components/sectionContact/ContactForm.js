@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ModalContactForm from './modalContactForm/ModalContactForm';
+import ModalContactForm from './ModalContactForm';
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -66,7 +66,7 @@ class ContactForm extends React.Component {
     };
     
     componentWillUnmount() {
-        document.addEventListener('keydown', this.escCloseModal, false);
+        document.removeEventListener('keydown', this.escCloseModal, false);
     };
 
     render () {
