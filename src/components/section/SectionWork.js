@@ -5,7 +5,7 @@ import PortfolioCard from './components/sectionWork/PortfolioCard';
 import ModalGallery from './components/sectionWork/ModalGallery';
 import Rotate from './components/Rotate';
 
-import { PORTFOLIO_DATA } from './../constant/portfolioData';
+import { PORTFOLIO_DATA } from './../../constant/portfolioData';
 
 
 class SectionWork extends React.Component {
