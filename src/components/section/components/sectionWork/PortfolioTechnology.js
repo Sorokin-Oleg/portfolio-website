@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PortfolioTechnology = (props) => {    
     const item = props.lable.map((element, index) => {
-        return <div className='portfolio-technology-item' key={index}>{element}</div> 
+        return <span className='portfolio-technology-item' key={index}>{element}</span> 
     });
 
     return (
