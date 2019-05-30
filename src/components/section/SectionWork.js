@@ -32,7 +32,7 @@ class SectionWork extends React.Component {
      * Subject to the conditions, runs the function of closing the modal window
      */
     escCloseModal(event) {
-        if(event.keyCode === 27 && this.props.modal.modalActive) {
+        if(event.keyCode === 27 && this.props.modalActive) {
             this.modalClose();
         }; 
     };
@@ -46,7 +46,6 @@ class SectionWork extends React.Component {
     };
 
     render() {
-        console.log(this.props.state);
         const settings = {
             dots: true,
             infinite: true,
