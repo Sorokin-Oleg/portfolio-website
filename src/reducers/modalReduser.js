@@ -1,7 +1,7 @@
 const initialState = {
     modalActiveIndex: 0,
     modalActive: false
-}
+};
 
 const modalReduser = (state = [], action) => {
     switch(action.type) {

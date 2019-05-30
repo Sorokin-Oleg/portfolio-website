@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from "react-router-dom";
 import { createStore } from 'redux';
 import {Provider} from 'react-redux';
-import modalReduser from './components/reducers/modalReduser';
+import modalReduser from './reducers/modalReduser';
 import App from './App';
 
 import './scss/main.scss';
