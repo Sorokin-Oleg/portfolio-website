@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Stars from './components/sectionHome/Stars';
-import Rotate from './components/Rotate';
+import Rotate from './Rotate';
 
 const SectionHome = () => {
     return (

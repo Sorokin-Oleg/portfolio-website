@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Rotate from './components/Rotate';
+import Rotate from './Rotate';
 
 const SectionSkills = () => {
     return (
