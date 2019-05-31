@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import { connect, dispatch } from 'react-redux';
 import Slider from "react-slick";
-import PortfolioCard from './components/sectionWork/PortfolioCard';
-import ModalGallery from './components/sectionWork/ModalGallery';
-import Rotate from './components/Rotate';
-
 import { PORTFOLIO_DATA } from './../../constant/portfolioData';
 
+import PortfolioCard from './components/sectionWork/PortfolioCard';
+import ModalGallery from './components/sectionWork/ModalGallery';
+import Rotate from './Rotate';
 
 class SectionWork extends React.Component {
     constructor(props) {
@@ -14,7 +13,7 @@ class SectionWork extends React.Component {
 
         this.modalClose = this.modalClose.bind(this);
         this.escCloseModal = this.escCloseModal.bind(this);
-    }
+    };
 
     modalClose() {
         const data = {
@@ -33,7 +32,7 @@ class SectionWork extends React.Component {
      * Subject to the conditions, runs the function of closing the modal window
      */
     escCloseModal(event) {
-        if(event.keyCode === 27 && this.props.modal.modalActive) {
+        if(event.keyCode === 27 && this.props.modalActive) {
             this.modalClose();
         }; 
     };
@@ -79,8 +78,8 @@ class SectionWork extends React.Component {
                         </Slider> 
                     </div>
                     <ModalGallery 
-                        imageData={PORTFOLIO_DATA[this.props.modal.modalActiveIndex].imageData} 
-                        modalActive={this.props.modal.modalActive}
+                        imageData={PORTFOLIO_DATA[this.props.modalIndex].imageData} 
+                        modalActive={this.props.modalActive}
                         modalClose={this.modalClose}                   
                     />                                                                            
                 </div>
@@ -92,7 +91,8 @@ class SectionWork extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        modal: state        
+        modalActive: state.modalActive,
+        modalIndex: state.modalActiveIndex
     };
 };
 

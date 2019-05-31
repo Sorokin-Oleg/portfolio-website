@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
 
-const ModalGallery = (props) => {    
-
+const ModalGallery = (props) => {
     const settings = {
         dots: true,        
         lazyLoad: true,
@@ -21,7 +20,7 @@ const ModalGallery = (props) => {
         );
     });
 
-    let modalState = props.modalActive ? {display:'flex'} : {display:'none'};
+    const modalState = props.modalActive ? {display:'flex'} : {display:'none'};
     
     return(
         <div className='modal-gallery-container'style={modalState}>

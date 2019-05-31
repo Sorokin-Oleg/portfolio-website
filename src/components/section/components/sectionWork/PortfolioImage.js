@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 class PortfolioImage extends React.Component {
     constructor(props){
         super(props);
+        
         this.modalOpen = this.modalOpen.bind(this);
     };
 

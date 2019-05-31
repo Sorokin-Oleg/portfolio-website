@@ -47,8 +47,7 @@ class ContactForm extends React.Component {
      * When closing the modal window we clean the forms
      */
     closeModal() {
-        this.setState({modal:false});
-        this.setState({name:'',email:'',subject:'',message:''})
+        this.setState({modal:false, name:'', email:'', subject:'', message:''})
     };
 
     /**

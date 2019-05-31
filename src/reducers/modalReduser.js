@@ -1,14 +1,10 @@
-const initialState = {
-    modalActiveIndex: 0,
-    modalActive: false
-};
-
-const modalReduser = (state = [], action) => {
+const modalReduser = (state = {modalActiveIndex: 0, modalActive: false}, action) => {
     switch(action.type) {
         case "MODAL_ACTIVE":
-        return state = action.data;
+            return state = action.data;
+            
         default:
-        return initialState;
+            return state;
     };
 };
 

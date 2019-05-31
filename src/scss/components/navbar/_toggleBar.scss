@@ -25,11 +25,9 @@
         transform: rotate(45deg);
         transform-origin: 15% 15%;
     }
-
     .toggle-bar-middle {
         opacity: 0;
     }
-
     .toggle-bar-bottom {
         background: $hover-color;
         transform: rotate(-45deg);

@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 
-const ToggleBar = (props) => {
-       
+const ToggleBar = (props) => {       
     let toggleBar = props.active ? 'toggle-bar toggle-bar-opened' : 'toggle-bar';
-
+    
     return (            
         <button className={toggleBar} onClick={props.onClick} >
             <span className='toggle-bar-top'></span>
