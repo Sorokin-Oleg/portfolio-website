@@ -25,52 +25,6 @@
     }
 }
 
-.regular-section {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 100%;
-    .regular-item-text {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;              
-        padding: 0 6rem;        
-        & h1 {
-            margin: 1rem 0;
-            font-size: 3rem;
-            letter-spacing: 0.2rem;
-            color: $default-color;            
-        }
-        & p, span {
-            font-size: $fontSizeDefault;
-            color: $light-color;
-        }
-        & a {
-            color: $default-color;
-            @include transition-line;
-            &:hover {
-                color: $hover-color;
-                @include transition-line;
-            }
-        }
-    }
-    .regular-item-image {        
-        @include flex-center;
-        flex-direction: column;
-        & img {            
-            margin: 1.5rem;
-            @include transition-line;
-            &:hover {
-                filter: drop-shadow(0 0 20px #fff);                
-            } 
-        }
-    }
-    .regular-image-container {
-        margin: 0.5rem 0;
-        text-align: center;        
-    }
-}
-
 @include media-breakpoint-lg {
     .main-content {
         flex-direction: column;
@@ -80,18 +34,8 @@
         height:calc(100% - 6rem);
         width: 100%;
     }
-    .regular-item-text {
-        padding: 0 4rem;
-    }
     .content-overflow-y {
         overflow-y: auto;
-    }
-}
-
-@include media-breakpoint-md {
-    .regular-section {   
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto;        
     }
 }
 
@@ -116,24 +60,5 @@
 @include media-breakpoint-sm {
     .content {        
         margin-top: 6rem;
-    }
-    .regular-section {
-        .regular-item-text {
-            margin-top: 6rem;
-            padding: 0 2rem;
-            & h1 {                
-                font-size: 2.2rem;
-            }
-            & p {
-                font-size: $fontSizeSmall ;
-            }
-        }
-        .regular-item-image {
-            padding: 0 2rem;
-            margin-bottom: 2rem;
-            & img {
-                margin: 1rem;
-            }            
-        }
-    }
+    } 
 }
