@@ -7,7 +7,7 @@ const ModalContactForm = (props) => {
         <div className='modal-contact-form-container modal-open' style={{display:displayState}}>
                 <h1>Hi, {props.name}!</h1>                    
                 <p>This is demo form.</p>
-                <p>To contact me please use <a href="https://www.linkedin.com/" target='_blank'>LinkedIn</a>.</p>
+                <p>To contact me please use <a href="https://www.linkedin.com/in/oleg-sorokin-7a2153188/" target='_blank'>LinkedIn</a>.</p>
                 <p>You can also copy the text of your message by clicking on the button below.</p>
                 <p>Thank!</p>
                 <div>
