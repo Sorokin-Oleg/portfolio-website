@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     height: 100%; 
-    padding: 2rem;        
+    padding: 2rem; 
     .modal-gallery-button-close {
         background: inherit;
         color: $light-color;        
@@ -35,12 +35,11 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    width: auto;
-    outline-style: none;    
+    height: 80vh;
+    outline-style: none;  
     & img {             
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 100%;
     }
 }
 
@@ -52,5 +51,9 @@
     }
     .modal-image-container {
         height: 60vh;
+        & img {             
+            width: 100%;
+            height: auto;
+        }
     }
 }

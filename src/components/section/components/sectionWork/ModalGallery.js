@@ -4,12 +4,10 @@ import Slider from "react-slick";
 const ModalGallery = (props) => {
     const settings = {
         dots: true,        
-        lazyLoad: true,
         infinite: true,
-        speed: 300,
+        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 2
     };
 
     const image = props.imageData.image.map((element, index) => {
