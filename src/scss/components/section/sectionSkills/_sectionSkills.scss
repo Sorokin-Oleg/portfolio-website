@@ -16,9 +16,18 @@
        letter-spacing: 0.2rem;
        color: $default-color;            
    }
-   & p {
+   & h4 {
+       font-size: 2rem;
+       margin: 1rem 0;
+       letter-spacing: 0.2rem;
+   }
+   & ul, li {
+        list-style-type: disc;
+   }
+   & p, li {
        font-size: $fontSizeDefault;
        color: $light-color;
+       margin: 0.5rem 0;       
    }
    & a {
        color: $default-color;
@@ -68,18 +77,16 @@
 }
 
 @include media-breakpoint-sm {
-   .about-image-container {
-       & img {
-           width: 25rem;   
-       }             
-   }
    .skills-description-container {
        margin-top: 6rem;
        padding: 0 2rem;
        & h1 {                
            font-size: 2.2rem;
        }
-       & p {
+       & h4 {
+           font-size: 1.6rem;
+       }
+       & p, li {
            font-size: $fontSizeSmall ;
        }
    }
