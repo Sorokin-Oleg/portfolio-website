@@ -1,7 +1,7 @@
-import React, { component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class PortfolioImage extends React.Component {
+class PortfolioImage extends Component {
     constructor(props){
         super(props);
         

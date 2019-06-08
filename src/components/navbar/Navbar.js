@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import NavbarButton from './NavbarButton';
 import ToggleBar from './ToggleBar';
 
-class Navbar extends React.Component {
+class Navbar extends Component {
     constructor(props) {
         super(props);
 
@@ -18,7 +18,7 @@ class Navbar extends React.Component {
     };
     
     render() {        
-        let navOpen = this.state.toggleActive ? 'navbar-open' : 'navbar-close';
+        const navOpen = this.state.toggleActive ? 'navbar-open' : 'navbar-close';
 
         return (
             <section className='navbar-container'>
@@ -33,7 +33,7 @@ class Navbar extends React.Component {
                 <div id='navbar_links'>
                     <ul className='navbar-links'>
                         <li><a href="https://github.com/Sorokin-Oleg" target="_blank"><i className="fab fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/oleg-sorokin-7a2153188/" target="_blank"><i className="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/oleg-sorokin/" target="_blank"><i className="fab fa-linkedin-in"></i></a></li>
                         <li><a href="https://vk.com/sorokin_robots" target="_blank"><i className="fab fa-vk"></i></a></li>
                     </ul>                    
                 </div>

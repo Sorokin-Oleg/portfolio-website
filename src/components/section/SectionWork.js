@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { connect, dispatch } from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Slider from "react-slick";
 import { PORTFOLIO_DATA } from './../../constant/portfolioData';
 
@@ -7,7 +7,7 @@ import PortfolioCard from './components/sectionWork/PortfolioCard';
 import ModalGallery from './components/sectionWork/ModalGallery';
 import Rotate from './Rotate';
 
-class SectionWork extends React.Component {
+class SectionWork extends Component {
     constructor(props) {
         super(props);
 
@@ -54,20 +54,18 @@ class SectionWork extends React.Component {
             slidesToScroll: 1
         };    
     
-        const portfolioCard = PORTFOLIO_DATA.map((element, index) => {
-            return(
-                <PortfolioCard
-                    key={index}
-                    id={index}
-                    nameProject={element.nameProject}
-                    coverImage={element.coverImage}
-                    lable={element.lable}
-                    description={element.description}
-                    sourceLink={element.sourceLink}
-                    appLink={element.appLink}
-                />
-            );
-        });              
+        const portfolioCard = PORTFOLIO_DATA.map((element, index) => (
+            <PortfolioCard
+                key={index}
+                id={index}
+                nameProject={element.nameProject}
+                coverImage={element.coverImage}
+                lable={element.lable}
+                description={element.description}
+                sourceLink={element.sourceLink}
+                appLink={element.appLink}
+            />
+        ));            
             
         return (
             <section>
@@ -89,7 +87,7 @@ class SectionWork extends React.Component {
     };    
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         modalActive: state.modalActive,
         modalIndex: state.modalActiveIndex

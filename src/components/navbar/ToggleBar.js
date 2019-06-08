@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-const ToggleBar = (props) => {       
-    let toggleBar = props.active ? 'toggle-bar toggle-bar-opened' : 'toggle-bar';
+const ToggleBar = ({active, onClick}) => {       
+    const toggleBar = active ? 'toggle-bar toggle-bar-opened' : 'toggle-bar';
     
     return (            
-        <button className={toggleBar} onClick={props.onClick} >
+        <button className={toggleBar} onClick={onClick} >
             <span className='toggle-bar-top'></span>
             <span className='toggle-bar-middle'></span>
             <span className='toggle-bar-bottom'></span>
