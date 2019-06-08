@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ModalContactForm from './ModalContactForm';
 
-class ContactForm extends React.Component {
+class ContactForm extends Component {
     constructor(props) {
         super(props);
 
@@ -31,8 +31,8 @@ class ContactForm extends React.Component {
     };
 
     handleSubmit(event) {
-        this.setState({modal:true});
         event.preventDefault();
+        this.setState({modal:true});
     };
 
     /**
@@ -73,7 +73,7 @@ class ContactForm extends React.Component {
             <div className='form-container'>
                 <div className='form-head'>        
                     <h1>Contact me</h1>
-                    <p>This form is just an example. To contact me please use <a href="https://www.linkedin.com/in/oleg-sorokin-7a2153188/" target='_blank'>LinkedIn</a>.</p>
+                    <p>This form is just an example. To contact me please use <a href="https://www.linkedin.com/in/oleg-sorokin/" target='_blank'>LinkedIn</a>.</p>
                 </div>
                 <form className='form-content' autoComplete="off" onSubmit={this.handleSubmit}>
                     <div className='form-content-header'>                       
