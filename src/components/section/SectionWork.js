@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Slider from "react-slick";
-import { PORTFOLIO_DATA } from "./../../constant/portfolioData";
+
+import DATA from "../../data/portfolioData";
 
 import PortfolioCard from "./components/sectionWork/PortfolioCard";
 import ModalGallery from "./components/sectionWork/ModalGallery";
@@ -54,7 +55,7 @@ class SectionWork extends Component {
       slidesToScroll: 1,
     };
 
-    const portfolioCard = PORTFOLIO_DATA.map((element, index) => (
+    const portfolioCard = DATA.map((element, index) => (
       <PortfolioCard
         key={index}
         id={index}
@@ -74,7 +75,7 @@ class SectionWork extends Component {
             <Slider {...settings}>{portfolioCard}</Slider>
           </div>
           <ModalGallery
-            imageData={PORTFOLIO_DATA[this.props.modalIndex].imageData}
+            imageData={DATA[this.props.modalIndex].imageData}
             modalActive={this.props.modalActive}
             modalClose={this.modalClose}
           />

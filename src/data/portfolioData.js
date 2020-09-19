@@ -1,4 +1,4 @@
-export const PORTFOLIO_DATA = [
+export default [
   {
     nameProject: "Weather App",
     coverImage: { backgroundImage: 'url("./assets/img/cover/weather_app.svg")' },
