@@ -1,4 +1,4 @@
-# Portfolio application
+# [Portfolio application](https://sorokin-oleg.github.io/portfolio-website/#/)
 ### A simple application for visualizing my work
 
 This application is a portfolio for my work related to the development of web interfaces.
@@ -12,4 +12,4 @@ To a large extent, this is an educational application, in which I experimented w
 - [SASS](https://sass-lang.com)
 
 
-You can view the working version here: https://sorokin-oleg.github.io/portfolio-website-build/#/
+You can view the working version here: https://sorokin-oleg.github.io/portfolio-website/#/
