@@ -1,188 +1,189 @@
-@import './modalGallery/modalGallery';
+@import "./modalGallery/modalGallery";
 
 .portfolio-card {
-    background: inherit;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas:'i t'
-                        'i d'
-                        'i d'
-                        'i d'
-                        'i d'
-                        'i l';
-    height: 80vh;
-    outline-style: none;       
+  background: inherit;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "i t"
+    "i d"
+    "i d"
+    "i d"
+    "i d"
+    "i l";
+  height: 80vh;
+  outline-style: none;
 }
 
 .portfolio-image-hover {
+  @include transition-line;
+  @include flex-center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  & i {
     @include transition-line;
-    @include flex-center; 
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    opacity: 0;
-    & i {
-        @include transition-line;
-        font-size: 5rem;
-        padding: 2rem;
-    }
-    & h1 {
-        opacity: 1;
-    }
-
+    font-size: 5rem;
+    padding: 2rem;
+  }
+  & h1 {
+    opacity: 1;
+  }
 }
 
 .portfolio-image-container {
-    @include flex-center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-area: i;
-    position: relative;
-    cursor: pointer;
-    letter-spacing: 0.2rem; 
-    margin: 0 0.2rem;  
-    & h1 {
-        font-size: 3rem;
-        letter-spacing: 0.2rem;
-    } 
+  @include flex-center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: i;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  margin: 0 0.2rem;
+  & h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+  .image-name-project {
+    opacity: 1;
+  }
+  &:hover {
     .image-name-project {
-        opacity: 1;             
+      opacity: 0;
     }
-    &:hover {
-        .image-name-project {
-            opacity: 0;       
-        }
-        .portfolio-image-hover {
-            @include transition-line; 
-            opacity: 0.7;
-            background: #000;           
-        }
+    .portfolio-image-hover {
+      @include transition-line;
+      opacity: 0.7;
+      background: #000;
     }
+  }
 }
 
 .portfolio-technology-container {
-    @include flex-center;
-    flex-wrap: wrap;
-    align-content: center;
-    grid-area: t;
-    margin: 2rem 0;
-    padding: 0 2rem;   
+  @include flex-center;
+  flex-wrap: wrap;
+  align-content: center;
+  grid-area: t;
+  margin: 2rem 0;
+  padding: 0 2rem;
 }
 
-.portfolio-technology-item {   
-    color: $light-color;
-    font-size: $fontSizeDefault;
-    padding: 0 2rem;
-    margin: 0.5rem;
-    border: 0.1rem solid $light-color;
-    border-radius: 10rem;
+.portfolio-technology-item {
+  color: $light-color;
+  font-size: $fontSizeDefault;
+  padding: 0 2rem;
+  margin: 0.5rem;
+  border: 0.1rem solid $light-color;
+  border-radius: 10rem;
 }
 
 .portfolio-description-container {
-    color: $light-color;
-    grid-area: d;
-    align-content: center;
-    overflow-y: auto;    
-    font-size: $fontSizeDefault;
-    margin: 2rem 0;
-    padding: 0 2rem;
+  color: $light-color;
+  grid-area: d;
+  align-content: center;
+  overflow-y: auto;
+  font-size: $fontSizeDefault;
+  margin: 2rem 0;
+  padding: 0 2rem;
 }
 
 .portfolio-link-container {
-    grid-area: l;
-    align-content: center;
-    @include flex-center;  
-    margin: 2rem 0;
-    padding: 0 2rem;
+  grid-area: l;
+  align-content: center;
+  @include flex-center;
+  margin: 2rem 0;
+  padding: 0 2rem;
 }
 
 .portfolio-link-item {
-    color: $light-color;
-    border: 0.1rem solid $light-color;
-    border-radius: 10rem;
-    text-align: center;
-    width: 50%;
-    height: 4rem;
-    line-height: 4rem;
-    font-size: $fontSizeDefault;
-    &:nth-child(2) {
-        margin-left: 1.5rem;
-    }
-    &:hover {
-        color: $hover-color;
-        border-color: $hover-color;
-        @include shadow;        
-    } 
+  color: $light-color;
+  border: 0.1rem solid $light-color;
+  border-radius: 10rem;
+  text-align: center;
+  width: 50%;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: $fontSizeDefault;
+  &:nth-child(2) {
+    margin-left: 1.5rem;
+  }
+  &:hover {
+    color: $hover-color;
+    border-color: $hover-color;
+    @include shadow;
+  }
 }
 
 @include media-breakpoint-lg {
-    .portfolio-card {
-        grid-template-columns: 100%;
-        grid-template-areas:'i' 
-                            'i' 
-                            'i'                                                  
-                            't'
-                            'd'
-                            'd'
-                            'l';
-        padding: 0 2rem;
-    }
-    .portfolio-image-container {
-        height: 40vh;
-        margin-bottom: 1rem;
-        padding: 0;
-        margin: 1rem 0;   
-    }
-    .portfolio-description-container {
-        padding: 0;
-        margin: 1rem 0;   
-    }
-    .portfolio-link-container {
-        padding: 0;
-        margin: 1rem 0;   
-    }
-    .portfolio-technology-container {
-        padding: 0;
-        margin: 1rem 0;   
-    }
+  .portfolio-card {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "i"
+      "i"
+      "i"
+      "t"
+      "d"
+      "d"
+      "l";
+    padding: 0 2rem;
+  }
+  .portfolio-image-container {
+    height: 40vh;
+    margin-bottom: 1rem;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .portfolio-description-container {
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .portfolio-link-container {
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .portfolio-technology-container {
+    padding: 0;
+    margin: 1rem 0;
+  }
 }
 
 @include media-breakpoint-sm {
-    .portfolio-card {
-        height: 100%;
-        padding: 0 1.5rem;
-    }
+  .portfolio-card {
+    height: 100%;
+    padding: 0 1.5rem;
+  }
 
-    .portfolio-technology-item {
-        font-size: $fontSizeSmall;
-    }
+  .portfolio-technology-item {
+    font-size: $fontSizeSmall;
+  }
 
-    .portfolio-link-container {
-        flex-direction: column;
-        .portfolio-link-item {
-            font-size: $fontSizeSmall;
-            height: 3.5rem;
-            line-height: 3.5rem;
-            width: 100%;
-            margin: 0;
-            &:nth-child(2) {
-                margin-top: 1.5rem;
-            }
-        }
+  .portfolio-link-container {
+    flex-direction: column;
+    .portfolio-link-item {
+      font-size: $fontSizeSmall;
+      height: 3.5rem;
+      line-height: 3.5rem;
+      width: 100%;
+      margin: 0;
+      &:nth-child(2) {
+        margin-top: 1.5rem;
+      }
     }
+  }
 
-    .portfolio-description-container {
-        min-height: 20vh;
-        font-size: $fontSizeSmall;
-    }
+  .portfolio-description-container {
+    min-height: 20vh;
+    font-size: $fontSizeSmall;
+  }
 
-    .portfolio-image-container {
-        & h1 {
-            font-size: 2.2rem;
-        }
+  .portfolio-image-container {
+    & h1 {
+      font-size: 2.2rem;
     }
+  }
 }

@@ -1,50 +1,49 @@
-
-@import './stars/stars';
+@import "./stars/stars";
 
 .home-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    @include flex-center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include flex-center;
 }
 
 .home-content {
-    text-align: center;
-    z-index: 1000;
+  text-align: center;
+  z-index: 1000;
+  & h1 {
+    letter-spacing: 0.5rem;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 1.5rem;
+  }
+  & img {
+    width: 30rem;
+    margin-bottom: 2rem;
+  }
+  & span {
+    color: $hover-color;
+  }
+}
+
+@include media-breakpoint-md {
+  .home-content {
     & h1 {
-        letter-spacing: 0.5rem;
-        font-size: 3rem;
-        font-weight: 400;
-        margin: 1.5rem;
+      letter-spacing: 0.2rem;
     }
     & img {
-        width: 30rem;
-        margin-bottom: 2rem;
-    }   
-    & span {
-        color: $hover-color;
-    } 
+      width: 25rem;
+    }
+  }
 }
 
 @include media-breakpoint-md {
-    .home-content {
-        & h1 {
-            letter-spacing: 0.2rem;
-        }
-        & img {
-            width: 25rem;
-        }
+  .home-content {
+    & h1 {
+      font-size: 2rem;
+      margin: 2rem 0;
     }
-}
-
-@include media-breakpoint-md {
-    .home-content {
-        & h1 {
-            font-size: 2rem;
-            margin: 2rem 0;
-        }
-        & img {
-            width: 20rem;
-        }
+    & img {
+      width: 20rem;
     }
+  }
 }

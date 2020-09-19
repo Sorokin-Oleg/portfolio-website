@@ -1,88 +1,90 @@
 .slider-content {
-    width: 85%;    
-    margin: 0 auto;
-    margin-top: 6rem;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 6rem;
 }
 
 .slider-modal-content {
-    width: 85%;
+  width: 85%;
 }
 
-.slick-prev, .slick-next {
-    height: 30px;
-    width: 30px;
-    &::before {
-        color: $hover-color;
-        font-size: 25px;
-    }
+.slick-prev,
+.slick-next {
+  height: 30px;
+  width: 30px;
+  &::before {
+    color: $hover-color;
+    font-size: 25px;
+  }
 }
 
 .slick-prev {
-    left: -60px;
+  left: -60px;
 }
 
-[dir='rtl'] .slick-prev {
-    right: -60px;
-    left: auto;
+[dir="rtl"] .slick-prev {
+  right: -60px;
+  left: auto;
 }
 
 .slick-next {
-    right: -60px;
+  right: -60px;
 }
 
-[dir='rtl'] .slick-next {
-    right: auto;
-    left: -60px;
+[dir="rtl"] .slick-next {
+  right: auto;
+  left: -60px;
 }
 
 .slick-dots {
-    bottom: -40px;
+  bottom: -40px;
 }
 
 .slick-dots li button:before {
-    color: $hover-color;   
+  color: $hover-color;
 }
 
 .slick-dots li.slick-active button:before {
-    color: $hover-color;    
+  color: $hover-color;
 }
 
-
 @include media-breakpoint-md {
-    .slider-content {
-        width: 80%;
-    }
-    .slider-modal-content {
-        width: 80%;
-    }
-    .slick-prev {
-        left: -50px;
-    }
-    
-    [dir='rtl'] .slick-prev {
-        right: -50px;
-    }
-    
-    .slick-next {
-        right: -50px;
-    }
-    
-    [dir='rtl'] .slick-next {
-        left: -50px;
-    }    
-    .slick-dots {
-        bottom: -30px;
-    }
+  .slider-content {
+    width: 80%;
+  }
+  .slider-modal-content {
+    width: 80%;
+  }
+  .slick-prev {
+    left: -50px;
+  }
+
+  [dir="rtl"] .slick-prev {
+    right: -50px;
+  }
+
+  .slick-next {
+    right: -50px;
+  }
+
+  [dir="rtl"] .slick-next {
+    left: -50px;
+  }
+  .slick-dots {
+    bottom: -30px;
+  }
 }
 
 @include media-breakpoint-sm {
-    .slider-content {        
-        min-width: 100%;
-    }
-    .slider-modal-content {
-        min-width: 100%;
-    }
-    .slick-arrow, .slick-next:before, .slick-prev:before {
-        display: none;
-    }       
+  .slider-content {
+    min-width: 100%;
+  }
+  .slider-modal-content {
+    min-width: 100%;
+  }
+  .slick-arrow,
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
 }

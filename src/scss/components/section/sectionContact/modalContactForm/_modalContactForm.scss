@@ -1,76 +1,76 @@
 .modal-contact-form-container {
-    background: $modal-bg;
+  background: $modal-bg;
+  color: $light-color;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: $fontSizeDefault;
+  text-align: center;
+  height: 100%;
+  width: calc(100% + 6rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  & p {
+    margin: 0.5rem 0;
+  }
+  & h1 {
+    margin: 1rem 0;
+  }
+  & a {
+    color: $default-color;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  & button {
+    background: inherit;
     color: $light-color;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;    
-    font-size: $fontSizeDefault;
-    text-align: center;
-    height: 100%;
-    width: calc(100% + 6rem);
-    position: fixed;    
-    top: 0;
-    left: 0;
-    z-index: 1;    
-    & p {
-        margin: 0.5rem 0;
+    cursor: pointer;
+    border: 0.1rem solid $light-color;
+    border-radius: 10rem;
+    padding: 1rem 0;
+    margin: 4rem 1rem;
+    width: 20vw;
+    outline: none;
+    &:hover {
+      @include shadow;
+      color: $hover-color;
+      border-color: $hover-color;
     }
-    & h1 {
-        margin: 1rem 0;
-    }
-    & a {
-        color: $default-color;
-        &:hover {
-            color: $hover-color;
-        }
-    }
-    & button {
-        background: inherit;
-        color: $light-color;
-        cursor: pointer;
-        border: 0.1rem solid $light-color;
-        border-radius: 10rem;
-        padding: 1rem 0;
-        margin: 4rem 1rem;
-        width: 20vw;
-        outline: none;
-        &:hover {
-            @include shadow;
-            color: $hover-color;
-            border-color: $hover-color;
-        }
-    }
+  }
 }
 
 @include media-breakpoint-lg {
-    .modal-contact-form-container {
-        width: 100%;
-    }
+  .modal-contact-form-container {
+    width: 100%;
+  }
 }
 
 @include media-breakpoint-md {
-    .modal-contact-form-container {
-        padding: 0 4rem;
-        & button {
-            width: 25vw;
-        }
+  .modal-contact-form-container {
+    padding: 0 4rem;
+    & button {
+      width: 25vw;
     }
+  }
 }
 
 @include media-breakpoint-sm {
-    .modal-contact-form-container {
-        background: $dark-color;
-        padding: 0 2rem;
-        font-size: $fontSizeSmall;
-        top: 6rem;
-        height: calc(100%-6rem);
-        & button {
-            margin: 1rem 0;       
-            min-width: 90vw;           
-        }
-        & h1 {
-            font-size: 2.2rem;
-        }
+  .modal-contact-form-container {
+    background: $dark-color;
+    padding: 0 2rem;
+    font-size: $fontSizeSmall;
+    top: 6rem;
+    height: calc(100%-6rem);
+    & button {
+      margin: 1rem 0;
+      min-width: 90vw;
     }
+    & h1 {
+      font-size: 2.2rem;
+    }
+  }
 }

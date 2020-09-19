@@ -1,111 +1,111 @@
 .navbar-container {
-    background: $dark-color;
-    position: fixed;   
+  background: $dark-color;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  height: 100%;
+  width: 6rem;
+  .navbar-links {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-shrink: 0;
-    height: 100%;
-    width: 6rem;    
-    .navbar-links {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;       
-        & li {
-            text-align: center;
-            line-height: 3rem;
-            height: 3rem;
-            width: 100%;          
-            & a {
-                display: block;                
-                font-size: $fontSizeDefault;
-                width: 100%;
-                height: 100%;              
-                & i {
-                    color: $light-color;                     
-                }
-                &:hover {
-                    & i {
-                        color: $hover-color;                                                
-                    }
-                }        
-            }
+    margin-bottom: 2rem;
+    & li {
+      text-align: center;
+      line-height: 3rem;
+      height: 3rem;
+      width: 100%;
+      & a {
+        display: block;
+        font-size: $fontSizeDefault;
+        width: 100%;
+        height: 100%;
+        & i {
+          color: $light-color;
         }
+        &:hover {
+          & i {
+            color: $hover-color;
+          }
+        }
+      }
     }
+  }
 }
 
 .navbar-open {
-    left: 0;
-    @include transition-line;
+  left: 0;
+  @include transition-line;
 }
 
 .navbar-close {
-    left: 100%;
-    @include transition-line;
-}   
+  left: 100%;
+  @include transition-line;
+}
 
 #navbar_content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #navbar_logo {
-    height: 8rem;
-    width: 100%;
-    @include flex-center;
-    & img {
-        opacity: 0.8;
-        width: 4rem;
-        height: 4rem;
-    }
+  height: 8rem;
+  width: 100%;
+  @include flex-center;
+  & img {
+    opacity: 0.8;
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 @include media-breakpoint-lg {
-    .navbar-container {
-        flex-direction: row;        
-        height: 6rem;
-        width: 100%;        
-        .navbar-links {
-            flex-direction: row;
-            margin-bottom: 0;
-            margin-right: 2em;
-            & li {
-                height: 100%;
-                width: 3rem;
-                line-height: 6rem;
-            }
-        }
-    }
-
-    #navbar_content {
-        flex-direction: row;
-    }
-
-    #navbar_logo {
-        width: 8rem;
+  .navbar-container {
+    flex-direction: row;
+    height: 6rem;
+    width: 100%;
+    .navbar-links {
+      flex-direction: row;
+      margin-bottom: 0;
+      margin-right: 2em;
+      & li {
         height: 100%;
+        width: 3rem;
+        line-height: 6rem;
+      }
     }
+  }
+
+  #navbar_content {
+    flex-direction: row;
+  }
+
+  #navbar_logo {
+    width: 8rem;
+    height: 100%;
+  }
 }
 
 @include media-breakpoint-sm {
-    .navbar-container {
-        width: 100%;
-        position: fixed;
-        flex-wrap: wrap;
-        z-index: 1;
-    }
+  .navbar-container {
+    width: 100%;
+    position: fixed;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
 
-    #navbar_content {
-        background: $dark-color;
-        justify-content: space-around;
-        order: 3; 
-        position: fixed;
-        width: 100%;
-        height: 6rem;
-        top: 6rem;
-    }
+  #navbar_content {
+    background: $dark-color;
+    justify-content: space-around;
+    order: 3;
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    top: 6rem;
+  }
 
-    #navbar_links {
-        display: none;
-    }
+  #navbar_links {
+    display: none;
+  }
 }

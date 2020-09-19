@@ -1,46 +1,46 @@
 .main-content {
-    display: flex;           
+  display: flex;
 }
 
 .content {
-    background: $dark-light-color;
-    color: $default-color;  
-    position: fixed;
-    bottom: 0;    
-    right: 0;     
-    width: calc(100% - 6rem);
-    height: 100%;
-    overflow: hidden;
-    animation: animate-content 1s ease-in-out;
+  background: $dark-light-color;
+  color: $default-color;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 6rem);
+  height: 100%;
+  overflow: hidden;
+  animation: animate-content 1s ease-in-out;
 }
 
 @keyframes animate-content {
-    from {
-        transform: translateY(100%);        
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);        
-        opacity: 1;
-    }
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @include media-breakpoint-lg {
-    .main-content {
-        flex-direction: column;
-    }
-    .content {
-        margin-top: 6rem;
-        height:calc(100% - 6rem);
-        width: 100%;
-    }
-    .content-overflow-y {
-        overflow-y: auto;
-    }
+  .main-content {
+    flex-direction: column;
+  }
+  .content {
+    margin-top: 6rem;
+    height: calc(100% - 6rem);
+    width: 100%;
+  }
+  .content-overflow-y {
+    overflow-y: auto;
+  }
 }
 
 @include media-breakpoint-sm {
-    .content {        
-        margin-top: 6rem;
-    } 
+  .content {
+    margin-top: 6rem;
+  }
 }
