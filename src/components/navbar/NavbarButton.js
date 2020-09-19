@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavbarButton = ({links, iconName, name}) => (
     <NavLink exact to={links} className='navbar-button' activeClassName='navbar-button-active'>
