@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Earth = () => (
-    <div className='earth-container'>
-        <div className="earth"></div>
-    </div>
+  <div className="earth-container">
+    <div className="earth"></div>
+  </div>
 );
 
 export default Earth;

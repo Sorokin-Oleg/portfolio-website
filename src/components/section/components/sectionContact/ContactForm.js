@@ -1,104 +1,140 @@
-import React, { Component } from 'react';
-import ModalContactForm from './ModalContactForm';
+import React, { Component } from "react";
+import ModalContactForm from "./ModalContactForm";
 
 class ContactForm extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-            modal: false
-        };
-
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.closeModal = this.closeModal.bind(this);
-        this.escCloseModal = this.escCloseModal.bind(this);
-        this.copyMessage = this.copyMessage.bind(this);        
+    this.state = {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      modal: false,
     };
 
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-        
-        this.setState({
-            [name]: value
-        });
-    };
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.escCloseModal = this.escCloseModal.bind(this);
+    this.copyMessage = this.copyMessage.bind(this);
+  }
 
-    handleSubmit(event) {
-        event.preventDefault();
-        this.setState({modal:true});
-    };
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
 
-    /**
-     * Copy text to clipboard
-     */
-    copyMessage() {
-        navigator.clipboard.writeText(this.state.message);
-        this.closeModal();
-    };
+    this.setState({
+      [name]: value,
+    });
+  }
 
-    /**
-     * When closing the modal window we clean the forms
-     */
-    closeModal() {
-        this.setState({modal:false, name:'', email:'', subject:'', message:''})
-    };
+  handleSubmit(event) {
+    event.preventDefault();
+    this.setState({ modal: true });
+  }
 
-    /**
-     * The function monitors the status of the modal window and the events of the pressed ESC button.
-     * Subject to the conditions, runs the function of closing the modal window
-     */
-    escCloseModal(event) {
-        if(event.keyCode === 27 && this.state.modal) {
-            this.closeModal();
-        }; 
-    };
+  /**
+   * Copy text to clipboard
+   */
+  copyMessage() {
+    navigator.clipboard.writeText(this.state.message);
+    this.closeModal();
+  }
 
-    componentDidMount() {
-        document.addEventListener('keydown', this.escCloseModal, false);
-    };
-    
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.escCloseModal, false);
-    };
+  /**
+   * When closing the modal window we clean the forms
+   */
+  closeModal() {
+    this.setState({ modal: false, name: "", email: "", subject: "", message: "" });
+  }
 
-    render () {
-        return (
-            <div className='form-container'>
-                <div className='form-head'>        
-                    <h1>Contact me</h1>
-                    <p>This form is just an example. To contact me please use <a href="https://www.linkedin.com/in/oleg-sorokin/" target='_blank'>LinkedIn</a>.</p>
-                </div>
-                <form className='form-content' autoComplete="off" onSubmit={this.handleSubmit}>
-                    <div className='form-content-header'>                       
-                        <input className='form-content-header-item' type="text" placeholder='Name'
-                               name='name' value={this.state.name} onChange={this.handleInputChange}
-                               maxLength='40' autoFocus required /> 
+  /**
+   * The function monitors the status of the modal window and the events of the pressed ESC button.
+   * Subject to the conditions, runs the function of closing the modal window
+   */
+  escCloseModal(event) {
+    if (event.keyCode === 27 && this.state.modal) {
+      this.closeModal();
+    }
+  }
 
-                        <input className='form-content-header-item' type="email" placeholder='Email'
-                               name='email' value={this.state.email} onChange={this.handleInputChange}
-                               maxLength='40' required />
-                    </div>                        
-                    <input type="text" placeholder='Subject' maxLength='60'
-                           name='subject' value={this.state.subject} onChange={this.handleInputChange} />
-                           
-                    <textarea placeholder='Message' maxLength='1000' required
-                              name='message' value={this.state.message} 
-                              onChange={this.handleInputChange}></textarea>  
+  componentDidMount() {
+    document.addEventListener("keydown", this.escCloseModal, false);
+  }
 
-                    <input type="submit" value='Send'/>                        
-                </form>
-                <ModalContactForm modal={this.state.modal} name={this.state.name}
-                                  closeModal={this.closeModal} copyMessage={this.copyMessage} />
-            </div>
-        );
-    };
-};
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.escCloseModal, false);
+  }
+
+  render() {
+    return (
+      <div className="form-container">
+        <div className="form-head">
+          <h1>Contact me</h1>
+          <p>
+            This form is just an example. To contact me please use{" "}
+            <a href="https://www.linkedin.com/in/oleg-sorokin/" target="_blank">
+              LinkedIn
+            </a>
+            .
+          </p>
+        </div>
+        <form className="form-content" autoComplete="off" onSubmit={this.handleSubmit}>
+          <div className="form-content-header">
+            <input
+              className="form-content-header-item"
+              type="text"
+              placeholder="Name"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleInputChange}
+              maxLength="40"
+              autoFocus
+              required
+            />
+
+            <input
+              className="form-content-header-item"
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+              maxLength="40"
+              required
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Subject"
+            maxLength="60"
+            name="subject"
+            value={this.state.subject}
+            onChange={this.handleInputChange}
+          />
+
+          <textarea
+            placeholder="Message"
+            maxLength="1000"
+            required
+            name="message"
+            value={this.state.message}
+            onChange={this.handleInputChange}
+          ></textarea>
+
+          <input type="submit" value="Send" />
+        </form>
+        <ModalContactForm
+          modal={this.state.modal}
+          name={this.state.name}
+          closeModal={this.closeModal}
+          copyMessage={this.copyMessage}
+        />
+      </div>
+    );
+  }
+}
 
 export default ContactForm;

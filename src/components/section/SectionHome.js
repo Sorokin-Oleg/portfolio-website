@@ -1,21 +1,29 @@
-import React from 'react';
-import Stars from './components/sectionHome/Stars';
-import Rotate from './Rotate';
+import React from "react";
+import Stars from "./components/sectionHome/Stars";
+import Rotate from "./Rotate";
 
 const SectionHome = () => (
-    <section>
-        <div className='content'>
-            <div className='home-container'>
-                <Stars />
-                <div className='home-content'>                    
-                    <img src="./assets/img/home_logo.svg" alt="Sorokin Oleg - Frontend Developer"/>  
-                    <h1><span>{'<h1>'}</span>{"Hi, I'm Sorokin Oleg"}<span>{'<h1>'}</span></h1>                  
-                    <h1><span>{'<'}</span>{'Frontend Developer'}<span>{'/>'}</span></h1>
-                </div>
-            </div>            
+  <section>
+    <div className="content">
+      <div className="home-container">
+        <Stars />
+        <div className="home-content">
+          <img src="./assets/img/home_logo.svg" alt="Sorokin Oleg - Frontend Developer" />
+          <h1>
+            <span>{"<h1>"}</span>
+            {"Hi, I'm Sorokin Oleg"}
+            <span>{"<h1>"}</span>
+          </h1>
+          <h1>
+            <span>{"<"}</span>
+            {"Frontend Developer"}
+            <span>{"/>"}</span>
+          </h1>
         </div>
-        <Rotate/>
-    </section>
+      </div>
+    </div>
+    <Rotate />
+  </section>
 );
 
 export default SectionHome;

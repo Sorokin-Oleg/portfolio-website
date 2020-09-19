@@ -1,19 +1,16 @@
 {
-  "name": "webpack-config-react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "space-portfolio",
+  "version": "1.0.1",
   "scripts": {
     "start": "webpack-dev-server --open --hot --config ./build/webpack.dev.conf.js ",
-    "build": "webpack --config ./build/webpack.build.conf.js"
+    "build": "webpack --config ./build/webpack.build.conf.js",
+    "prettier": "prettier --write */**/*.{js,html,css,json}"
   },
   "browserslist": [
     "> 1%",
     "last 3 version"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
@@ -30,6 +27,7 @@
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^3.0.0",
+    "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
